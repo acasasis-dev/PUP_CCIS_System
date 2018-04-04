@@ -1,0 +1,38 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Blood Bank Account
+
+    form(method="POST" action=`/admin/users/profile${tblbloodbank ? `/${tblbloodbank.bloodbankId}?_method=POST` : ''}`)
+        .field
+            .label Blood Bank Name
+            .control
+                input.input(type="text" name="name" value= tblbloodbank ? tblbloodbank.bloodbankName : '' placeholder="ex. Dugo Corporations" required)
+        .field
+            .label Location
+            .control
+                input.input(type="text" name="loc" value= tblbloodbank ? tblbloodbank.bloodbankLoc : '' placeholder="ex. Sta. Mesa, Manila" required)
+        .field
+            .label Category
+            .control    
+                select.input(name="category")     
+                    each category in tblcategory      
+                        option(value= category.intCATEGORY_ID)= category.strCATEGORY_NAME
+        .field
+            .label Contact No 1
+            .control
+                input.input(type="number" name="contact1" value= tblbloodbank ? tblbloodbank.bloodbankContact1 : '' placeholder="Enter Contact No." minlength="11" maxlength="13" required)
+        .field
+            .label Contact No 2
+            .control
+                input.input(type="number" name="contact2" value= tblbloodbank ? tblbloodbank.personContact2 : '' placeholder="Enter Contact No." minlength="11" maxlength="13")
+        .field
+            .label Contact No 3
+            .control
+                input.input(type="number" name="contact3" value= tblbloodbank ? tblbloodbank.personContact3 : '' placeholder="Enter Contact No." minlength="11" maxlength="13")
+
+        input.button.is-primary(type="submit" value="Submit")
+    br
+    br

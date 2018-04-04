@@ -1,0 +1,26 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Blood Stock
+    table.table.is-fullwidth
+        thead
+            tr
+                th Blood Type
+                th Blood Component
+                th Count
+                th Price
+                th Actions
+        
+        tbody
+            each stock in stocks
+                tr
+                    td= stock.strBLOODTYPE_DESCRIPTION
+                    td= stock.strBLOODCOMPONENT_DESCRIPTION
+                    td= stock.strBLOODSTOCK_COUNT
+                    td= stock.strBLOODSTOCK_PRICE
+                    td
+                        a(href=`/bloodbank/bloodstock/${stock.intBLOODSTOCK_ID}`): span.fa.fa-edit
+                        | &nbsp;

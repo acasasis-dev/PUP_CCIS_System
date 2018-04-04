@@ -1,0 +1,46 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Blood Bank Stock
+
+    form(method="POST" action=`${stocks ? `${stocks.intBLOODSTOCK_ID}?_method=POST` : ''}`)
+        .field
+            .label A+
+            .control
+                input.input(type="text" name="ap" value= stocks ? stocks.intBLOODSTOCK_AP : '')
+        .field
+            .label A-
+            .control
+                input.input(type="text" name="an" value= stocks ? stocks.intBLOODSTOCK_AN : '')
+        .field
+            .label B+
+            .control
+                input.input(type="text" name="bp" value= stocks ? stocks.intBLOODSTOCK_BP : '')
+        .field
+            .label B-
+            .control
+                input.input(type="text" name="bn" value= stocks ? stocks.intBLOODSTOCK_BN : '')
+        .field
+            .label AB+
+            .control
+                input.input(type="text" name="abp" value= stocks ? stocks.intBLOODSTOCK_ABP : '')
+        .field
+            .label AB-
+            .control
+                input.input(type="text" name="abn" value= stocks ? stocks.intBLOODSTOCK_ABN : '')
+        .field
+            .label O+
+            .control
+                input.input(type="text" name="op" value= stocks ? stocks.intBLOODSTOCK_OP : '')
+        .field
+            .label O-
+            .control
+                input.input(type="text" name="on" value= stocks ? stocks.intBLOODSTOCK_ON : '')
+            .label PRICE
+            .control
+                input.input(type="text" name="price" value= stocks ? stocks.dblBLOODSTOCK_PRICE : '')
+        
+        input.button.is-primary(type="submit" value="Submit")
+    br

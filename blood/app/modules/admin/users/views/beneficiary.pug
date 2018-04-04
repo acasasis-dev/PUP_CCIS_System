@@ -1,0 +1,10 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} BENEFICIARY
+        -console.log(tblperson.intPERSON_ID);
+    form(method="POST" action=`/bloodbank/beneficiary${tblperson ? `/${tblperson.intPERSON_ID}?_method=POST` : ''}`)
+        
+        input.button.is-primary(type="submit" value="Submit")

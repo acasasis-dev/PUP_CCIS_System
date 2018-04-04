@@ -1,0 +1,36 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Blood Stock
+        
+        table.table.is-fullwidth
+            thead
+                th Blood Component
+                th A+
+                th A-
+                th B+
+                th B-
+                th AB+
+                th AB-
+                th O+
+                th O-
+                th Blood Service Fee  
+                
+            tbody
+                each stock in stocks
+                    tr
+                        th= stock.strBLOODCOMPONENT_DESCRIPTION
+                        th= stock.strBLOODSTOCK_AP
+                        th= stock.strBLOODSTOCK_AN
+                        th= stock.strBLOODSTOCK_BP
+                        th= stock.strBLOODSTOCK_BN
+                        th= stock.strBLOODSTOCK_ABP
+                        th= stock.strBLOODSTOCK_ABN
+                        th= stock.strBLOODSTOCK_OP
+                        th= stock.strBLOODSTOCK_ON
+                        th= stock.dblBLOODSTOCK_PRICE
+        br
+                            

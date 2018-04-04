@@ -1,0 +1,510 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+</script>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><h1>  Frequently Ask Question</h1></a>
+  <br>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 justify-content-end">
+          <span class="navbar-text">
+                
+          </span>
+            
+            <!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    User
+                </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div> -->
+    </form>
+    
+    
+</nav>
+<style>
+.container-fluid {
+    
+ 	
+     padding: 10px 40px;
+     background:crimson;
+} 
+h1 {
+    font-family:Courier New, Courier, monospace;
+    color:white;
+    text-shadow:0 0 5px #FF0000;
+}
+.panel-body {
+    background:black;
+    font-family:Courier New, Courier, monospace;
+    font-size:20px;
+    color:white;
+    font-weight:bold;
+}
+.panel-title {
+    background: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:30px;
+    color:white;
+}
+.panel-heading {
+    font-size:30px;
+}
+.clickable
+{
+    cursor: pointer;   
+}
+.row
+{
+    width: 60%; 
+}
+
+
+</style>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-9">
+    <div class="panel-group" id="accordion" role="tablist" >
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                 <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                1. What happens to my donated blood?
+            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                <i class="more-less glyphicon glyphicon-chevron-down"></i>
+            </span>
+            </a>
+        
+          </h4>
+    
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    Each unit of blood collected will be examined for 5 transfusion-transmissible infectious diseases, namely: HIV, Malaria, Syphillis, Hepatitis B, and Hepatitis C before it is transfused to patients.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                 <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                2. Is it safe to give blood?
+            <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                <i class="more-less glyphicon glyphicon-chevron-down"></i>
+            </span>
+            </a>
+          </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    Yes. The Red Cross ensures that donating blood is a safe opportunity to give the gift of life. Each needle used in the procedure is sterile and is disposed after a single use. It is important that all blood donors are in good health, well-rested, and have eaten prior to donation. 
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                     <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    3. When can we donate blood?
+                <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                    <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                </span>
+                </a>
+              </h4>
+        
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                        A healthy person may donate blood every three months.
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        4. Where can I donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            You may come and visit PRC's National Blood Center, Regional Blood Centers, or any of its Blood Services Facilities, nationwide.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSix">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        5. Can a person who has a tattoo donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body">
+                            As long as the tattooing procedure was done aseptically (in a sterile manner), he/ she may donate blood one year after the procedure. This is the same with ear piercing, acupuncture, and other procedures involving needles.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwentythree">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+                        6. Are the health history questions necessary every time I donate?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTwentythree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentythree">
+                        <div class="panel-body">
+                            To ensure the safest possible blood supply, all donors must undergo the necessary screening every donation. The World Health Organization and the Department of Health require all blood centers to conform to this practice.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSeven">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        7. What does the term "donor deferral" mean?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                        <div class="panel-body">
+                            Individuals disqualified from donating blood are known as "deferred" donors. A prospective donor may be deferred at any point during the collection and testing process. Whether or not a person is deferred, temporarily or permanently, will depend on the specific reason for disqualification (i.e. a person may be deferred temporarily because of anemia, a condition that is usually reversible). If a person is to be deferred, his or her name is entered into a list of deferred donors maintained by the blood center, often known as the "deferral registry." If a deferred donor attempts to give blood before the end of the deferral period, the donor will not be accepted for donation. Once the reason for the deferral no longer exists and the temporary deferral period has lapsed, the donor may return to the blood bank and be re-entered into the system.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEigth">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEigth" aria-expanded="false" aria-controls="collapseEigth">
+                        8. If I was deferred once before, am I still ineligible to donate?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseEigth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEigth">
+                        <div class="panel-body">
+                            If your deferral is of a permanent nature, you will be informed. Otherwise, the deferral time depends upon the reason for deferral. Prior to each donation, you will be given a mini-physical and medical interview. At that time, it will be determined if you are eligible to donate blood on that particular day.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNine">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        9. What are some of the reasons for permanent deferral?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                        <div class="panel-body">
+                            - Hepatitis B or C infection.<br/>
+                            - HIV infection.<br/>
+                            - Having sexual contact with a person infected with HIV<br/>
+                            - Having multiple sex partners/ patronizing sex workers<br/>
+                            - Serious chronic illness (heart and lung diseases)
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                        10. Can a person who just had his/ her tooth extracted donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                        <div class="panel-body">
+                            He/ She will be temporarily deferred for a year.
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEleven">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                        11. If I just received a flu shot, can I donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                        <div class="panel-body">
+                            Yes. There is no waiting period to donate after receiving a flu shot.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwelve">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                        12. If I have a cold flu, can I donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                        <div class="panel-body">
+                            In order to donate, blood centers require that you should be generally in good health (symptom-free); thus, it is important that you are feeling well.                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThirteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                        13. Can I still donate if I have high blood pressure?
+                        
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                        <div class="panel-body">
+                            Yes, if your blood pressure is under control and within the limits set in the donation guidelines.
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFourteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                        14. What if I'm taking aspirin or medication prescribed by my doctor?                        
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseFourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                        <div class="panel-body">
+                            Aspirin and Ibuprofen will not affect a whole blood donation. Apheresis platelet donors, however, must not take aspirin or aspirin products 36 hours prior to the donation. Many other medications are acceptable; but it is recommended that you call the blood center ahead of time to inquire about the type of medication you are taking.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFifteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                        15. What if I have Anemia?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseFifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                        <div class="panel-body">
+                            You cannot give blood if you have anemia. However, this can often be a temporary condition. Your hemoglobin level will be tested before you donate, in order to make sure that it is within an acceptable range.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSixteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                        16. How long does it take to donate blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseSixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                        <div class="panel-body">
+                            The whole process of donating blood will only take an average of 25 minutes.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSeventeen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                        17. Will I put on weight after blood donation?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseSeventeen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                        <div class="panel-body">
+                            No. All you put on is the feeling of satisfaction because you have helped someone.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingEighteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                        18. What other types of tests are done on the blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseEighteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                        <div class="panel-body">
+                            Your blood is tested to determine your blood type—classified as A, B, AB, and O—and your Rh factor. The Rh factor refers to the presence or absence of a specific antigen, a substance capable of stimulating an immune response, in the blood; so, you are either Rh positive or Rh negative, meaning you either carry the antigen or you don't. This information is important to know, because your blood type and Rh factor must be compatible with the blood type and Rh factor of the person receiving your blood.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingNineteen">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                        19. What is the most common blood type?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseNineteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNineteen">
+                        <div class="panel-body">
+                            The approximate distribution of blood types in the Philippines population is as follows (though distribution may be different for specific racial and ethnic groups):<br/><br/>
+                            
+                           O Rh-positive --- 44-46 percent<br/>
+                           A Rh-positive --- 22-23 percent<br/>
+                           B Rh-positive --- 24-25 percent<br/>
+                           AB Rh-positive --- 4-6 percent<br/>
+                           Rh-negative group --- Less than 1 percent
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwenty">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                        20. What fees are associated with blood?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTwenty" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwenty">
+                        <div class="panel-body">
+                            While the donated blood is free, there are significant costs associated with the collection, testing, labeling, preparation of components, and storage of blood. In addition to these, charges are also incurred through recruitment and education of donors, as well as quality assurance. As a result, processing fees are charged to recover these costs. Blood processing fees collected are in conformance with the stipulated allowable fees as mandated by the Department of Health.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwentyone">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentyone" aria-expanded="false" aria-controls="collapseTwentyone">
+                        21. What can you do if you aren't eligible to donate?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTwentyone" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyone">
+                        <div class="panel-body">
+                            While a given individual may be unable to donate, he or she may be able to recruit a suitable donor. PRC Blood Banks are always in need of volunteers to assist during blood donations, or to organize mobile blood drives. In addition, monetary donations through the Blood Samaritan Project of the Red Cross are always welcome, to help ensure that blood banks can continue providing safe blood to those in need, most especially to indigent patients.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwentytwo">
+                         <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
+                        22. How can I host a mobile blood donation activity at work, school, church or community?
+                    <span class="pull-right panel-collapse-clickable" data-toggle="collapse" data-parent="#accordion" href="#filterPanel">
+                        <i class="more-less glyphicon glyphicon-chevron-down"></i>
+                    </span>
+                    </a>
+                  </h4>
+            
+                    </div>
+                    <div id="collapseTwentytwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentytwo">
+                        <div class="panel-body">
+                            Kindly refer to the Blood Services Facility near you. Contact the blood center in order to learn more about the requirements.
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </div>
+    </div>
+<script type="text/javascript">
+    function toggleIcon(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

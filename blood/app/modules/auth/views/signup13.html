@@ -1,0 +1,167 @@
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+</script>
+<style>
+  h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:50px;
+    color:white;
+  }
+  input[type=text] {
+    width: 400px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border:3px solid crimson;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize:none;
+}
+input[type=password] {
+    width: 400px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border:3px solid crimson;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize:none;
+}
+input[type=email] {
+    background-color:white;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /*border:3px double slateblue;*/
+    border-radius: 2px;
+    position: absolute;
+    transition: .5s ease;
+    
+}
+.btn_signUp{
+    background-color:skyblue;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    position: absolute;
+    transition: .5s ease;
+}  
+  body{
+  background-color:darkred;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00589F', endColorstr='#0073CF', GradientType=0);
+  color: white;
+}
+
+.form-group {
+ max-width: 1000px;
+}
+
+</style>
+</nav>
+<div class="header">
+  
+<div class="container">
+        <div class="row">            
+          <section> 
+                 
+            <h1 class="entry-title"><span>
+             <img src="/assets/yst.gif" width="60" height="60" class="d-inline-block align-top" alt=""> 
+             Sign Up</span> </h1>
+            <hr>
+            <form method="POST" action="/signup">
+                <div class="form-group">
+                <label class="control-label col-sm-3">Email ID <span class="text-danger">*</span></label>
+                <div class="col-md-8 col-sm-9">
+                    <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email ID" value="">
+                    </div>
+                    <small> Your Email Id is being used for ensuring the security of your account, authorization and access recovery. </small> </div>
+                </div>
+            
+                <div class="form-group">
+                <label class="control-label col-sm-3">Set Password <span class="text-danger">*</span></label>
+                <div class="col-md-5 col-sm-8">
+                    <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Choose password (5-15 chars)" value="">
+                </div>   
+                </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3">Name<span class="text-danger">*</span></label>
+                  <div class="col-md-6 col-sm-5">
+                      <div class="input-group">
+                      <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" value="">
+                      
+                      
+                      <input type="text" class="form-control" name="mname" id="mname" placeholder="Middle Name" value="">
+                      
+                      
+                      <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" value="">
+                      </div>
+                  </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3">Date of Birth <span class="text-danger">*</span></label>
+            <div class="col-xs-8">
+              <div class="form-inline">
+                <div class="form-group">
+                      <div class="control">
+                          <input type="date" name="date" min="1905-01-01" value="" class="input"/>
+                      </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="form-group">
+            <label class="control-label col-sm-3">Age<span class="text-danger">*</span></label>
+            <div class="col-md-6 col-sm-5">
+                <div class="input-group">
+                <input type="number" class="form-control" name="age" id="age" placeholder="Age" value="">
+              </div>
+            </div>
+          </div> -->
+          <div class="form-group">
+            <label class="control-label col-sm-3">Address<span class="text-danger">*</span></label>
+            <div class="col-md-6 col-sm-5">
+                <div class="input-group">
+                <input type="text" class="form-control" name="address" id="address" placeholder="Address" value="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3">Contact No. <span class="text-danger">*</span></label>
+            <div class="col-md-5 col-sm-8">
+                <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+              <input type="text" class="form-control" name="contactnum" id="contactnum" placeholder="Enter your Primary contact no." value="">
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="col-xs-offset-3 col-xs-10">
+                <input name="Submit" type="submit" value="Sign Up" class="btn btn-primary">
+              </div>
+            </div>
+          </form>
+        </div> 
+      </div>
+</div>

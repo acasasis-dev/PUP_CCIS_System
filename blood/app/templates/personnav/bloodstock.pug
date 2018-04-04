@@ -1,0 +1,33 @@
+//- This is the master template. Basically all the other pages will
+//- extend this. This btw, is a Pug comment. This will not appear
+//- in your browser when you render the HTML.
+
+//- See here that I modified this a bit so I can use the base
+//- template for the login page
+extends ./base
+
+    
+block body
+    // I'm using Bulma's classes here.
+    // Refer to this: http://bulma.io/documentation/layout/container/
+    link(rel="stylesheet" href="/assets/bulma/master.css")
+    link(rel="stylesheet" href="/styles/personnav/personnav.css")
+    nav.navbar
+        div.navbar-brand
+            a.yst(href="/home/member")
+                <img src="/assets/yst.gif" width="45" height="45" class="d-inline-block align-top" alt="">DALOY
+        a.ystsub(href="/home/member")
+            div.subtitle Because Saving Lives Matter.
+        
+        
+
+    div.container-fluid     
+
+
+
+         
+        //- This part right here is the dynamic content. Once you extend
+        //- this template, you can place anything here.
+        
+        // This comment marks the dynamic content
+        block content

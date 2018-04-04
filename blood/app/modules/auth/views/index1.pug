@@ -1,0 +1,53 @@
+extends ../../../templates/adminnav/adminnav
+
+block content
+
+    link(rel="stylesheet" href="/styles/homeadmin.css")
+
+    body
+    
+        //- form(class="form-inline my-2 my-lg-0 justify-content-end")    
+        //-     br
+        //-     br
+        //-     a(href="/admin/users/blood" class="button" role="button") Blood Bank Accounts
+        //-     br
+        //-     br
+            
+    each posts in post
+        br
+        br
+        form( method="POST" action="/home/member" )
+            div(class="container")
+                br
+                br
+                .field
+                    .label NAME:
+                        input.input( type="hidden" value=posts.strPERSON_FN+' '+posts.strPERSON_LN )
+                .field
+                    .label BLOOD COMPONENT:
+                        input.input( type="hidden" value=posts.strBLOODCOMPONENT_DESCRIPTION )
+                .field
+                    .label BLOOD TYPE:
+                        input.input( type="hidden" value=posts.strBLOODTYPE_DESCRIPTION )
+                .field
+                    .label DATE:
+                        input.input( type="hidden" value=posts.dtmPOST_DATE )
+                .field
+                    .label CONTENT:
+                        input.input( type="hidden" value=posts.strPOST_CONTENT )
+                .field
+                    .label STATUS:
+                        input.input( type="hidden" value=posts.strSTATUS_DESCRIPTION )
+        div(class="space")
+        //- .field
+        //-     .label Contact Number
+        //-     .control
+        //-         td= user.strPERSON_CONTACTNO
+        
+          //-Copyrights
+    div(class="row")
+      div(class="col-sm-12")
+        p
+          a YST Co. &copy; 2017 - 2018 All Rights Reserved 
+          a(href="") Privacy Policy | 
+          a(href="") Service Terms & Conditions

@@ -1,0 +1,39 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Users
+    
+    a.button.is-primary.pull-right(href="/admin/users/new")
+        span.fa.fa-plus
+        | &nbsp; Add User
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th E-mail
+                th First Name
+                th Middle Name
+                th Last Name
+                th Age
+                th Address
+                th Contact No.
+                th Actions
+        
+        tbody
+            each user in tblperson
+                tr
+                    td= user.personId
+                    td: a(href=`/admin/users/${user.personId}`)= user.personEmail
+                    td= user.personFN
+                    td= user.personMN
+                    td= user.personLN
+                    td= user.personAge
+                    td= user.personAddress
+                    td= user.personContactno
+                    td
+                        a(href=`/admin/users/${user.personId}`): span.fa.fa-edit
+                        | &nbsp;
+                        a(href=`/admin/users/${user.personId}/remove`): span.fa.fa-remove

@@ -1,0 +1,35 @@
+extends ../../../../templates/personnav/personnav
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; Reservation
+    form(method="POST" action=`${tblbloodbank ? `${tblbloodbank.intBLOODBANK_ID}?_method=POST` : ''}`)
+        .field
+            .label Blood Component
+            .control    
+                      select.input(name="component")     
+                        option(value= 1) WHOLE BLOOD
+                        option(value= 2) PLATELETS
+                        option(value= 3) PLASMA
+                        option(value= 4) CRYOPRECIPITATED AHF
+                        option(value= 5) RED CELLS
+        .field
+            .label Blood Type
+            .control
+                select.input(name="type")     
+                        
+                        option(value= 1) A+
+                        option(value= 2) A-
+                        option(value= 3) AB+
+                        option(value= 4) AB-
+                        option(value= 5) B+
+                        option(value= 6) B-
+                        option(value= 7) O+
+                        option(value= 8) O-
+
+        .field
+            .label Quantity
+            .control
+                input.input(type="text" name="qty" value= reserve ? reserve.strQUANTITY : '' maxlength='1' required)
+        input.button.is-primary(type="submit" value="Submit")
+    br

@@ -1,0 +1,10 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    h1.title
+        | &nbsp; Respond in Post?
+    each posts in post
+        form(method="POST" action=`${posts ? `${posts.intPOST_ID}?_method=POST` : ''}`)
+            
+            input.button.is-primary(type="submit" value="YES")
+    br

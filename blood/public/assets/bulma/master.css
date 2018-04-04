@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+.title {
+    color: darkred;
+    font-family: 'Garamond', sans-serif;
+    font-size: 45px;
+}
+
+.container-fluid {
+    /* background-color:white; */
+    background-color: white;
+}
+
+.navbar {
+    background-color: #F14141;
+}
+
+input[type=text] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=datetime] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=date] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+.control select {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=password] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=email] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none
+}
+
+input[type=datetime-local] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none
+}
+
+input[type=category] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none
+}
+
+input[type=number] {
+    width: 1000px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid darkred;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    resize: none
+}
+
+.label {
+    color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+
+.button.is-primary {
+    background-color: #F14141;
+    border: black;
+    cursor: pointer;
+    line-height: 1.5;
+    font-family: 'Garamond', sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+}
+
+.container {
+    background-image: "/assets/yst.gif";
+}
+
+thead th {
+    background-color: #240404;
+}
+
+.navbar-link {
+    color: #FFFFFF;
+    text-shadow: 0 0 15px black;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar-item {
+    color: darkred;
+    
+}
+
+.fa.fa-user {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.fa.fa-user:hover {
+    color: darkred;
+}
+
+.navbar-item:hover {
+    color: darkred;
+}
+
+.navbar-brand {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-shadow: 0 0 15px black;
+}
+
+div p {
+    text-align: center;
+}
+
+.button.is-primary:hover,
+.button.is-primary.is-hovered {
+    background-color: darkred;
+    border-color: transparent;
+    color: #fff;
+}
+
+.table thead td,
+.table thead th {
+   
+    border-width: 0 0 2px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.navbar-link:hover {
+    color: #FF0000;
+}
+
+table {
+    /* border: 5px solid red; */
+    background: linear-gradient(to top, rosybrown 40%, rosybrown 100%);
+}
+
+.table thead th {
+    border: 2px solid white;
+}
+
+.table tbody td {
+    border: 2px solid #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0px;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    font-size: 19px;
+    font-weight: bold;
+    /* text-shadow: 0 0 15px #000000; */
+}
+
+.fa.fa-plus {
+    padding-bottom: 2px;
+}
+.fa.fa-mail-reply {
+    float:left;
+    width: 50px;
+    height: 50px;
+}
+a.yst { 
+    color: inherit;
+    text-decoration:none;
+}
+a.yst: hover { 
+    color: inherit;
+}
+a.ystsub { 
+    color: inherit;
+    text-decoration:none;
+}
+a.ystsub: hover { 
+    color: inherit;
+}
+a.ystsub, a.yst {
+    padding-bottom:1.9%;
+}

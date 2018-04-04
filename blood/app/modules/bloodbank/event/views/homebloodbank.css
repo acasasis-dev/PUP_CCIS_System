@@ -1,0 +1,25 @@
+
+a
+{
+    width: 200px;
+    height: 50px;
+}
+.button
+{
+    background-color: #752828;
+    color: #fff;
+    border: none;
+}
+a.button 
+{
+    
+    color: #fff;
+    border: none;
+    text-decoration: none;
+}
+.button:hover
+{
+    background-color: darkred;
+    color: #fff;
+    border: none;
+}

@@ -1,0 +1,44 @@
+extends ../../../../templates/personnav/bloodstock
+
+
+block content
+    h1.title
+        =stock[0].strBLOODBANK_NAME+' '+'Blood Stock'
+    .field    
+        td= 'Location: '+stock[0].strBLOODBANK_LOCATION
+    .field
+        td= 'Contact No.1: '+stock[0].strBLOODBANK_CONTACT1
+    .field
+        td= 'Contact No.2: '+stock[0].strBLOODBANK_CONTACT2
+    .field
+        td= 'Contact No.3: '+stock[0].strBLOODBANK_CONTACT3              
+    table.table.is-fullwidth
+        thead
+            th Blood Component
+            th A+
+            th A-
+            th B+
+            th B-
+            th AB+
+            th AB-
+            th O+
+            th O-
+            th Blood Service Fee  
+            th Actions  
+        tbody
+        each stocks in stock
+                
+                tr
+                    th= stocks.strBLOODCOMPONENT_DESCRIPTION
+                    th= stocks.intBLOODSTOCK_AP
+                    th= stocks.intBLOODSTOCK_AN
+                    th= stocks.intBLOODSTOCK_BP
+                    th= stocks.intBLOODSTOCK_BN
+                    th= stocks.intBLOODSTOCK_ABP
+                    th= stocks.intBLOODSTOCK_ABN
+                    th= stocks.intBLOODSTOCK_OP
+                    th= stocks.intBLOODSTOCK_ON
+                    th= stocks.dblBLOODSTOCK_PRICE
+                    td You need to register first before reserving.
+    br                   
+                    

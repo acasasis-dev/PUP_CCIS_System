@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Messaging Version 2</title>
+	</head>
+	<body>
+		<h1>Add a contact</h1>
+		each email in emails
+			form( method="POST" action= `${ redr }` )
+				b= email.strACCOUNT_EMAIL
+				input( type="hidden" name="id" value=`${ email.intACCOUNT_ID }` )
+				button( type="submit" ) +
+				br
+	</body>
+</html>

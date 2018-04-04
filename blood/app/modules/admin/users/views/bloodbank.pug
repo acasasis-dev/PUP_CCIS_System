@@ -1,0 +1,23 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Blood Bank Account
+
+    form(method="POST" action=`/admin/users${tblbloodbank ? `/${tblbloodbank.bloodbankId}?_method=POST` : ''}` )
+        
+        .field
+            .label E-mail
+            .control
+                input.input(type="email" name="email" value= tblbloodbank ? tblbloodbank.bloodbankEmail : '' required placeholder="Enter Email")
+        
+        if !tblbloodbank
+            .field
+                .label Password
+                .control
+                    input.input(type="password" name="password" required placeholder="Enter Password")
+        input.button.is-primary(type="submit" value="Submit")
+    br
+    br
+    br

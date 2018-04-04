@@ -1,0 +1,32 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    h1.title
+        | User Profile
+
+    each user in tblperson
+        .field
+            .label First Name
+            .control
+                td= user.strPERSON_FN
+        .field
+            .label Middle Name
+            .control
+                td= user.strPERSON_MN
+        .field
+            .label Last Name
+            .control
+                td=user.strPERSON_LN
+        .field
+            .label Address
+            .control
+                td= user.strPERSON_ADDRESS
+        //- .field
+        //-     .label Birth Date
+        //-     .control
+        //-         td= user.dtmPERSON_BDAY
+        .field
+            .label Contact Number
+            .control
+                td= user.strPERSON_CONTACTNO
+        a.button.is-primary(href=`profile/${user.intPERSON_ID}`) EDIT

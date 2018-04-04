@@ -1,0 +1,28 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Events
+    
+    
+    table.table.is-fullwidth
+        thead
+            tr        
+                th Event Description
+                th Location
+                th Date/Time
+                
+                
+        
+        tbody
+            each events in event
+                tr
+                    
+                    td= events.strEVENT_DESC
+                    td= events.strEVENT_LOCATION
+                    td= events.dtmEVENT_DATETIME
+                    

@@ -1,0 +1,45 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Blood Bank Stock
+
+    form(method="POST" action=`/admin/users/bloodstock${stock ? `/${stock.intBLOODSTOCK_ID}?_method=POST` : ''}`)
+        .field
+            .label A+
+            .control
+                input.input(type="text" name="ap" value= stock ? stock.strBLOODSTOCK_AP : '')
+        .field
+            .label A-
+            .control
+                input.input(type="text" name="an" value= stock ? stock.strBLOODSTOCK_AN : '')
+        .field
+            .label B+
+            .control
+                input.input(type="text" name="bp" value= stock ? stock.strBLOODSTOCK_BP : '')
+        .field
+            .label B-
+            .control
+                input.input(type="text" name="bn" value= stock ? stock.strBLOODSTOCK_BN : '')
+        .field
+            .label AB+
+            .control
+                input.input(type="text" name="abp" value= stock ? stock.strBLOODSTOCK_ABP : '')
+        .field
+            .label AB-
+            .control
+                input.input(type="text" name="abn" value= stock ? stock.strBLOODSTOCK_ABN : '')
+        .field
+            .label O+
+            .control
+                input.input(type="text" name="op" value= stock ? stock.strBLOODSTOCK_OP : '')
+        .field
+            .label O-
+            .control
+                input.input(type="text" name="on" value= stock ? stock.strBLOODSTOCK_ON : '')
+            .label PRICE
+            .control
+                input.input(type="text" name="price" value= stock ? stock.strBLOODSTOCK_PRICE : '')
+        
+        input.button.is-primary(type="submit" value="Submit")

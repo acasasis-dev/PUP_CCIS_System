@@ -1,0 +1,1052 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+       
+        <title>YST - Company</title>
+        <!-- <link rel="icon" href="/assets/yst.ico" /> -->
+        <link rel="icon" href="/assets/yst.gif" type="image/gif" sizes="16x16">
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/sidebar.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/visibility.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/transition.js'></script>
+        
+        <!-- wwhen removed, modal fixed but the navbar brokes -->
+
+
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/reset.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/site.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/container.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/grid.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/header.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/image.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/menu.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/dropdown.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/divider.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/segment.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/list.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/icon.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/button.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/transition.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/sidebar.min.css'>
+
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css'>
+        <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.css'>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>  
+    
+      </head>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<header>
+
+    <div class="navbar">
+      
+        <!-- <ul class="nav">
+          <li class="item">
+            <a href="/member/bloodstock/view">Blood Banks and Blood Stocks</a>
+          </li>
+
+          <li class="item">
+            <a href="/bloodbank/event/viewevent">Events</a>
+          </li>
+
+          <li class="item">
+            <a href="#">About</a>
+          </li>
+
+          <li class="item">
+            <a href="#" class="contact">Contact</a>
+          </li>
+        </ul> -->
+        <ul class="nav">
+          <!-- <li class="active"><a href="#">Home</a></li> -->
+          <li class="item"><a href="/member/bloodstock/view">Blood Stocks</a></li>
+          <li class="item"><a href="/bloodbank/event/viewevent">Events</a></li>
+          <li class="item"><a href="/admin/users/faq">FAQ</a></li>
+          <li class="item"><a href="/signup">Signup</a></li>
+        </ul>
+
+        <div class="logo">
+          <img src="/assets/yst.gif" alt="Blood Logo">
+        </div>
+      </div>
+
+    <video autoplay loop id="video" muted >
+        <source src="\assets\blood.mp4" type="video/mp4">
+      </video>  
+      
+</header>  
+
+<body>
+    <!-- <nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl" data-startColor="navbar--color--ghost" data-startSize="navbar--size--xl" data-intoColor="navbar--color--secondary" data-intoSize="navbar--size--md">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><img src="/assets/yst.gif" alt="Blood Logo" width="25" height="25" ></a>
+            <ul>
+              <br>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Active</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="mobileNav">
+            <p class="navbar-right navbar-text"><br>Don't have an account yet? &nbsp;&nbsp;&nbsp;<button class="small ui inverted red button" action="/signup">SIGN UP</button></p>
+          </div>
+        </div>
+      </nav> -->
+      
+    </header>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <div class="ui container" style="text-align:center;">
+        <div class="title">Daloy</div>  <hr class="style-six">
+        <div class="subtitle" > Because Saving Lives, Matters. </div> 
+        <br><br><br>
+        <div class="heartbeat"><i class="fa fa-heart"></i></div>
+    <button class="btn draw-border" type="button" id="modal">LOGIN</button>
+  </div>
+
+  <div class="ui small modal">
+      <div class="login-form"> 
+          <div class="login-top">
+              <h1 class="login-header">SIGN IN</h1>
+              <form  method="POST" action="/login">
+                  <input type="text" id="user-name" name="email" required />
+                  <label for="user-name"  class="input-prefix">Email</label>
+
+                  <input type="password" id="password" name="password" required />
+                  <label for="password" class="input-prefix">Password</label>
+                  
+                  <input type="submit" id="sign-in" name="Sign-in" value="Sign in" />
+              </form>
+          </div>
+          
+          <div class="login-bottom">
+          </div>
+          
+          <div class="company-name">
+              <span>
+                  <img src="/assets/yst.gif" type="image/gif" width="32" height="32" >
+              </span>
+              YST - Company
+          </div>
+      </div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.7/semantic.min.js'></script>
+      </div>
+
+    <!-- Page Contents -->
+  <br><br><br><br><br><br><br><br><br>
+<div class="pusher">
+  <div class="ui vertical stripe first segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <!-- <h2 class="ui header">Not All Heroes Wear Capes</h2>
+          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
+          &nbsp &nbsp <img src="assets/yst.gif" width="40" height="40"> &nbsp &nbsp  <img src="assets/yst.gif" width="30" height="30">  &nbsp &nbsp  <img src="assets/yst.gif" width="40" height="40"> &nbsp &nbsp <img src="assets/yst.gif" width="30" height="30">  &nbsp &nbsp  <img src="assets/yst.gif" width="40" height="40"> &nbsp &nbsp  <img src="assets/yst.gif" width="30" height="30"> &nbsp &nbsp  <img src="assets/yst.gif" width="40" height="40"> &nbsp &nbsp  <img src="assets/yst.gif" width="30" height="30"> &nbsp &nbsp  <img src="assets/yst.gif" width="40" height="40">  -->
+          <h2 class="ui header">Want to Help Others? Sign Up Now!</h2>
+          <p>Yes that's right, If helping and saving lives is your goal, YST has got your back!</p>
+        </div>
+        <div class="six wide right floated column">
+            <img src="/assets/21984288_1693385144036749_820484685_n.jpg" width="400" height="300">
+        </div>
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+<br> <br> 
+   
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+        <div class="column">
+          <br>
+          <br>
+          <h3>"Your Blood -Their Life- </h3>
+         
+        </div>
+         <div class="column">
+         <br>
+         <br>
+          <h3>Who Knows Maybe One Day</h3>
+         
+        </div>
+         <div class="column">
+          
+         <br>
+         <br>
+          <h3> It'll Be Their Blood -Your Life-"</h3>
+         
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+
+  <div class="ui vertical stripe third segment">
+    <div class="ui container">
+      <div class="ui middle aligned stackable grid container">
+      <div class="row">
+      <div class="eight wide column">  
+      <h2 class="ui header">How to Donate</h2>
+      <p>Preparation before donating blood
+      <br>1. Have enough rest and sleep.
+      <br>2. No alcohol intake 24 hours prior to blood donation.
+      <br>3. No medications for at least 24 hours prior to blood donation.
+      <br>4. Have something to eat prior to blood donation, avoid fatty food
+      <br>5. Drink plenty of fluid, like water or juice. Steps in donating blood.</p>
+     
+      </div>
+       <div class="six wide right floated column">
+            <img src="/assets/donation.jpg" width="500" height="300">
+        </div>
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+      <br>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe social segment">
+    <div class="ui text container">
+        <h3 class="ui header">What Happens to My Donated Blood?</h3>
+        <p>Each unit of blood collected will be examined for 5 transfusion-transmissible infectious diseases, namely: HIV, Malaria, Syphillis, Hepatitis B, and Hepatitis C before it is transfused to patients.</p>
+        <!-- <a class="ui large red button">Read More</a> -->
+    </div>
+  </div>
+
+  <div class="ui vertical stripe fourth segment">
+      <div class="ui text container">
+          <h2 class="ui header">The Health Benefits of Donating Blood</h2>
+          <p>You can lose weight, reduce your risk of heart disease and cancer, and save a life at the same time by doing one thing: donating blood.</p>
+          <!-- <a class="ui large red button">Read More</a> -->
+      </div>
+    </div>
+    <br>
+
+    <!-- <div class="ui vertical stripe social segment">
+      <div class="ui text container">
+          <h3 class="ui center aligned header">Our Clients</h3>
+          <img class="img-responsive center-block" src="\assets\pup.png" width="130" height="130" /> 
+          <img class="img-responsive center-block" src="\assets\it.png" width="130" height="130" />
+          <img class="img-responsive center-block" src="\assets\prc1.svg"width="130" height="130"/>
+          <img class="img-responsive center-block" src="\assets\world.png" width="130" height="130"/>
+          <img class="img-responsive center-block" src="\assets\doh.png" width="130" height="130"/>
+      </div>
+    </div> -->
+   <br><br><br>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="four wide column">
+          <h4 class="ui inverted header"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Contact Us</h4>
+           <p>
+                        Polytechnic University of the Philippines <br />
+                        Sta. Mesa, Manila <br />
+                        000-000-000 <br />
+                       <a href="#"> Email: Daloy@gmail.com</a>
+                    </p>
+          </div>            
+       <div class="five wide column">
+         <h4 class="ui inverted header">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Go Social</h4>
+         <br>
+          <div class="ui inverted link list">
+            &nbsp &nbsp
+             <a href="#" class="twitter"><img src="/assets/twitter.png" width="60" height="60" class="d-inline-block align-top" alt=""></a>
+             <a href="#" class="youtube"><img src="/assets/youtube.png" width="50" height="50" class="d-inline-block align-top" alt=""></a>
+             <a href="#" class="yahoo"><img src="/assets/yahoo.png" width="50" height="50" class="d-inline-block align-top" alt=""></a>
+             <a href="#" class="gmail"><img src="/assets/gmail.png" width="50" height="50" class="d-inline-block align-top" alt=""></a>
+          </div>
+        </div>
+        <div class="four wide column">
+          <h4 class="ui inverted header">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Services </h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Blood Letting</a>
+            <a href="#" class="item">Disaster Management Services</a>
+            <a href="#" class="item">Health Services</a>
+            <a href="#" class="item">Red Cross Youth</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header"></h4>
+          <br>
+          
+         <p>&copy; Daloy Co.</a> 2017 - 2018 All Rights Reserved 
+          <br>
+          <br>
+                    <a href="">Privacy Policy</a> | <a href="">Service Terms & Conditions</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/sidebar.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/visibility.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/transition.js'></script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.7/semantic.min.js'></script>
+
+</body>
+
+<style>
+
+/* ul {
+    list-style-type: none;
+  }
+
+  li {
+    height: 25px;
+    float: right;
+    margin-right: 0px;
+    border-right: 1px solid #000000;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+   
+  li:last-child {
+    border-right: none;
+  }
+   
+  li a {
+   
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+   
+  li a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+   
+  li.active a {
+    color: #000000;
+  }
+  
+*{
+  box-sizing: border-box;
+} */
+
+/* body {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-top: 80px;
+  height: 1900px;
+} */
+
+/* header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+} */
+h3 {
+  font-family:Courier New, Courier, monospace;
+  text-shadow: 0 0 5px #FF0000;
+}
+ui text-container {
+   font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+              color:crimson;
+                font-size:30px;
+                text-shadow: 0 0 5px #FF0000;
+}
+@supports (position: sticky) {
+  body {
+    padding-top: 0;
+  }
+
+  header {
+    position: sticky;
+  }
+
+}
+
+.navbar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  transition: 0.5s ease;
+  z-index: 10;
+}
+
+.navbar .nav {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float:right;
+  margin-right: 50%;
+}
+
+.navbar .nav .item {
+  list-style: none;
+  display: inline-block;
+  font-size: 24px;
+  padding: 5px;
+  font-weight: 300;
+  line-height: 80px;
+  margin-right: 20px;
+  transition: 0.5s ease;
+  z-index:100;
+}
+
+.navbar .nav .item .contact {
+  display: inline-block;
+  background-color: #ffffff;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 2px;
+  transition: 0.5s ease;
+}
+
+.navbar .nav .item a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+  color: #FFFFFF;
+  font: Helvetica, Verdana, sans-serif; 
+  text-transform: uppercase;
+  z-index:100;
+  
+}
+
+.navbar .nav .item a:hover {
+    color: #C22B2B;
+    text-decoration: none;
+    transition: 0.7s ease;
+  }
+   
+/* .navbar .logo {
+  float: left;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5%;
+  width: 70px;
+  height: 70px;
+  background-color: firebrick;
+  transition: 0.5s ease;
+
+  display: none;
+} */
+
+.navbar .logo img {
+  float: left;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 2%;
+  width: 70px;
+  height: 70px;
+  transition: 0.5s ease;
+  z-index: 10;
+} 
+
+.scrolled {
+ transition: 0.5s ease;
+}
+
+.scrolled.navbar {
+  height: 50px; 
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  z-index: 10;
+
+}
+
+.scrolled.navbar .nav .item {
+  line-height: 40px;
+  transition: 0.5s ease;
+}
+
+.scrolled.navbar .nav .item .contact {
+  display: inline-block;
+  background-color: #ffffff;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 2px;
+  transition: 0.5s ease;
+}
+
+.scrolled.navbar .logo img {
+  float: left;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5%;
+  width: 40px;
+  height: 40px;
+  transition: 0.5s ease;
+}
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 8em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}
+
+.ui.inverted.segment, .ui.primary.inverted.segment, .ui.equal.width.stackable.internally.celled.grid, .ui.vertical.stripe.social.segment{
+  background: url('/assets/parallax.jpeg') repeat fixed 100%;
+}
+ 
+.ui.equal.width.stackable.internally.celled.grid {
+  height: 350px;
+  color: white;
+}
+.ui.equal.width.stackable.internally.celled.grid h3{
+  padding-top:5%;
+}
+.ui.vertical.stripe.social.segment{
+  height: 350px;
+  color: white;
+}
+.ui.vertical.stripe.social.segment h3{
+  color: white;
+  padding-top:5%;
+}
+.ui.vertical.stripe.first.segment{
+  height: 350;
+}
+.ui.vertical.stripe.third.segment{
+  height: 300;
+}
+.ui.vertical.stripe.fourth.segment{
+  height:300;
+}
+.ui.vertical.stripe.fourth.segment h3{
+  padding-top:10%;
+}
+.ui.inverted.vertical.footer.segment{
+  background:black;
+}
+hr.style-six {
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #333;
+  text-align: center;
+  }
+
+  /* heart */
+  @keyframes heartbeat {
+  0% {
+    transform: scale(0.75, 0.75);
+  }
+  16% {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(0.75, 0.75);
+  }
+  49% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.75, 0.75);
+  }
+}
+.heartbeat {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: heartbeat .8s infinite;
+  left: 50%;
+  top: 80%;
+  margin: -50px 0px 0px -50px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 100px;
+  color: darkred;
+  cursor: default;
+}
+
+/* heart */
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #000000;
+  color: #000000;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+  top: 90;
+  
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #FF0000;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #FF0000;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  font-size: 20px;
+}
+.btn:focus {
+  outline: 2px solid #000000;
+  font weight: bold;
+}
+
+
+
+/* The only rule that matters */
+#video {
+min-width: 100vw;
+min-height: 100vh;
+object-fit: cover;
+}
+/* These just style the content */
+/*article {
+/*  just a fancy border  */
+ /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid rgba(158, 153, 153, 0.5);
+  margin: 10px;
+}*/
+
+header {
+  height: 100vh;
+  margin-bottom: 2rem;
+  background size: cover;
+}
+
+/*
+h1 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  font-size: 72px;
+
+  text-align: center;
+}
+
+h1 span {
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1 span a {
+  color: #fff;
+}
+  */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+ /* background: -webkit-linear-gradient(#ebece7, white);
+  background: linear-gradient(#ebece7, white); */
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 45%;
+}
+
+.title {
+  font-weight:800;
+  color: transparent;
+  font-size: 81px;
+  background: url("/assets/ystbg.jpg") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 90px;
+  letter-spacing: -8px;
+  
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin: 0;
+  font-size: 20px;
+}
+
+/*login form*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*
+{
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+.login-form
+{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0px auto 0 auto;
+    width: 720px;
+    box-shadow: 0 0 20px 1px #222;
+}
+
+.login-form .login-top
+{
+    position: relative;
+    z-index: 11;
+    background-color: #FFF;
+    padding: 10px 45px;
+}
+
+.login-form .login-top h1
+{
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 40px;
+    color: darkred;
+    letter-spacing: -1.7px;
+}
+
+.login-form input
+{
+    display: block;
+    font-family: Montserrat;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]
+{
+    margin: 10px auto;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 100px;
+    border: 1px solid #CCC;
+    box-shadow: 0 1px 2px 1px #F5F5F5 inset;
+    background-color: #FEFEFE;
+    color: #323440;
+    width: 100%;
+    transition: 0.3s all;
+}
+
+.login-form input[type="text"]:focus, .login-form input[type="password"]:focus
+{
+    background-color: #f7f9fc;
+}
+
+.login-form .input-prefix
+{
+    position: absolute;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+    margin-top: -40px;
+    left: 60px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.login-form .input-prefix:after
+{
+    content: '';
+    position: relative;
+    display: block;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: red;
+    transition: 0.3s all;
+}
+
+.login-form input:focus + .input-prefix
+{
+    color:black;
+}
+
+.login-form input:focus + .input-prefix:after
+{
+    width: 100%;
+}
+
+.login-form input[type="submit"]
+{
+    border: none;
+    background-image: linear-gradient(135deg, #22bae7 70%, #10acd9);
+    color: #FFF;
+    font-weight: 700;
+    padding: 12px 47px;
+    margin: 30px auto 20px auto;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.login-form input[type="submit"]:hover,.login-form input[type="submit"]:focus
+{
+    box-shadow: 0 0px 15px 2px #CCC;
+}
+
+.login-form .login-bottom
+{
+    z-index: 10;
+    position: relative;
+    padding: 20px;
+    background-color: darkred;
+}
+
+.login-form .login-bottom a
+{
+    color: #CCC;
+    font-family: Montserrat;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.login-form .login-bottom a:hover
+{
+    text-decoration: underline;
+}
+
+.login-form .login-bottom:after
+{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    border: 30px solid transparent;
+    border-bottom-color: darkred;
+    transform: rotate(-45deg);
+    margin-top: -30px;
+}
+
+.login-form .company-name
+{
+    position: absolute;
+    display: block;
+    margin-top: 65px;
+    left: 0;
+    font-family: Montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: red;
+}
+
+.login-form .company-name .company-icon
+{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 7px;
+    border: 3px solid #00c5ff;
+    border-radius: 90px;
+}
+/*login form*/
+
+</style>
+
+<script>
+
+//modal
+$(document).ready(function(){
+    $("#modal").click(function(){
+      $(".small.modal").modal('show');
+    });
+    $(".small.modal").modal({
+      closable: true
+    });
+});
+  
+	// $(".small.modal").modal({
+	// 	closable: true
+	// });
+
+//modal
+
+  $(document).ready(function(){
+  var mouseX, mouseY;
+  var ww = $( window ).width();
+  var wh = $( window ).height();
+  var traX, traY;
+  $(document).mousemove(function(e){
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    traX = ((4 * mouseX) / 570) + 40;
+    traY = ((4 * mouseY) / 570) + 50;
+    console.log(traX);
+    $(".title").css({"background-position": traX + "%" + traY + "%"});
+  });
+});
+
+$(document).ready(function() {
+      $(window).on('scroll', function() {
+        if (Math.round($(window).scrollTop()) > 100) {
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    });
+
+
+
+</script>
+    </body>
+</html>

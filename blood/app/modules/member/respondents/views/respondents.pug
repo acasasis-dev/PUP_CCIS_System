@@ -1,0 +1,33 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Respondents
+    table.table.is-fullwidth
+        thead
+            tr
+                
+                th Name
+                th Blood Type
+                th Birth Date
+                th Email
+                th Actions
+                
+        
+        tbody
+            each respond in respondents
+                tr
+    
+                    td= respond.strPERSON_FN+' '+respond.strPERSON_MN+' '+respond.strPERSON_LN
+                    td= respond.strBLOODTYPE_DESCRIPTION
+                    td= respond.dtmPERSON_BDAY
+                    td= respond.strACCOUNT_EMAIL
+                    td= respond.strPERSON_CONTACTNO 
+                    td
+                        | &nbsp;
+                        a(href=`/member/respondents/${respond.intPDONOR_ID}/remove`): span.fa.fa-remove
+    br

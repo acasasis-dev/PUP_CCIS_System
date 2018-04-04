@@ -1,0 +1,43 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        |Edit Blood Bank Account
+    
+        form(method="POST" action=`${user ? `${user.intBLOODBANK_ID}?_method=PUT` : ''}`)
+            each user in bloodbanks
+                .field
+                    .label Blood Bank Name
+                    .control
+                        td= user.strBLOODBANK_NAME
+                .field
+                    .label Location
+                    .control
+                        input.input(type="text" name="loc" value= user ? user.strBLOODBANK_LOCATION : '')
+                .field
+                    .label Category
+                    .control    
+                            select.input(name="category")        
+                                    option(value= user.intCATEGORY_ID)= user.strCATEGORY_NAME
+                .field
+                    .label Contact No 1
+                    .control
+                        input.input(type="text" name="contact1" value= user ? user.strBLOODBANK_CONTACT1 : '' minlength="11" maxlength="13" required)
+                .field
+                    .label Contact No 2
+                    .control
+                        input.input(type="text" name="contact2" value= user ? user.strBLOODBANK_CONTACT2 : '' placeholder="Telephone No." minlength="7" maxlength="13")
+                .field
+                    .label Contact No 3
+                    .control
+                        input.input(type="text" name="contact3" value= user ? user.strBLOODBANK_CONTACT3 : '' placeholder="Fax No." minlength="11" maxlength="13")
+                
+                if !user
+                    .field
+                        .label Password
+                        .control
+                            input.input(type="password" name="password")
+                input.button.is-primary(type="submit" value="Submit")
+        br

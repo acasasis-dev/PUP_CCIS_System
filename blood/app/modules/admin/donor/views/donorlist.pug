@@ -1,0 +1,36 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp;  &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Donors
+    table.table.is-fullwidth
+        .field
+            //-         .label Search Donor
+            //-         .control
+            //-             input.input(type="text" name="name" value= tblevents ? tblevents.strEVENT_DESC : '')
+            //-             select.input(name="name")     
+            //-                     each name in donor   
+            //-                         option(value= name.intPERSON_ID)= name.strPERSON_LN+ ','+name.strPERSON_FN+' '+name.strPERSON_MN
+        thead
+            tr
+                th ID
+                th First Name
+                th Middle Name
+                th Last Name
+                th Blood Type
+                
+                
+        
+        tbody
+            each donors in donor
+                tr
+                    td= donors.intDONOR_ID
+                    td= donors.strPERSON_FN
+                    td= donors.strPERSON_MN
+                    td= donors.strPERSON_LN
+                    td= donors.strBLOODTYPE_DESCRIPTION
+    br

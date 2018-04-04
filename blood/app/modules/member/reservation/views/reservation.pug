@@ -1,0 +1,39 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Reservations
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Name
+                th Blood Type
+                th Blood Component
+                th Quantity
+                th Blood Bank Reserved
+                th Date Reserved
+                th Deadline
+                th Actions
+                
+        
+        tbody
+            each reserves in reserve
+                tr
+                    td= reserves.intBLOODRESERVE_ID
+                    td= reserves.strPERSON_FN+' '+reserves.strPERSON_MN+' '+reserves.strPERSON_LN
+                    td= reserves.strBLOODTYPE_DESCRIPTION
+                    td= reserves.strBLOODCOMPONENT_DESCRIPTION
+                    td= reserves.strQUANTITY
+                    td= reserves.strBLOODBANK_NAME
+                    td= reserves.dtmRESERVE_DATE
+                    td= reserves.dtmDEADLINE_DATE === '0000-00-00 00:00:00' ? 'Unapproved' : reserves.dtmDEADLINE_DATE
+                    td
+                       
+                        | &nbsp;
+                        a(href=`/member/reservation/${reserves.intBLOODRESERVE_ID}/remove`): span.fa.fa-remove
+    br

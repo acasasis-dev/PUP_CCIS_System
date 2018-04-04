@@ -1,0 +1,27 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Beneficiaries
+    
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th First Name
+                th Middle Name
+                th Last Name
+                
+        
+        tbody
+            each beneficiaries in beneficiary
+                tr
+                    td= beneficiaries.intBENEFICIARY_ID
+                    td= beneficiaries.strPERSON_FN
+                    td= beneficiaries.strPERSON_MN
+                    td= beneficiaries.strPERSON_LN
+    br

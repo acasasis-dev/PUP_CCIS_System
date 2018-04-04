@@ -1,0 +1,41 @@
+extends ../../../../templates/personnav/bloodstock
+
+block content
+
+    link(rel="stylesheet" href="/styles/personnav/menubar2.css")
+
+    body
+
+    each stocks in tblbloodbank
+        br
+        br
+        div(class="container")
+            br
+            br
+            .field    
+                .label Blood Bank Name:
+                    td= stocks.strBLOODBANK_NAME
+            .field    
+                .label Location:
+                    td= stocks.strBLOODBANK_LOCATION
+            .field 
+                .label Contact no. 1:
+                    td= stocks.strBLOODBANK_CONTACT1
+            .field
+                .label Contact no. 2:
+                    td= stocks.strBLOODBANK_CONTACT2
+            .field
+                .label Contact no. 3:
+                    td= stocks.strBLOODBANK_CONTACT3 
+            field
+                .label
+                    td
+                        a(href=`/member/bloodstock/view/${stocks.intBLOODBANK_ID}`) See Stocks
+    div(class="row")
+      div(class="col-sm-12")
+        p
+          a YST Co. &copy; 2017 - 2018 All Rights Reserved 
+          a(href="") Privacy Policy | 
+          a(href="") Service Terms & Conditions
+    br
+    br

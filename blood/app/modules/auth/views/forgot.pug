@@ -1,0 +1,19 @@
+.column
+    form(method="POST" action="/forgotpassword")
+        .field.is-horizontal
+            .field-label.is-normal
+                label.label.has-text-white E-mail
+        .field-body
+            .field
+                p.control.is-expanded
+                    input.input(type="email" name="email" placeholder="arya.stark@winterfell.com")
+    
+        .field.is-horizontal
+            .field-label.is-normal
+                label.label.has-text-white Password
+        .field-body
+            .field
+                p.control.is-expanded
+                    input.input(type="password" name="password")
+        
+        input.button.is-primary.is-pulled-right(type="submit" value="Log-in")

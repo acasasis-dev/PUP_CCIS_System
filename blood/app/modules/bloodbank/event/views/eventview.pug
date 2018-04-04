@@ -1,0 +1,21 @@
+extends ../../../../templates/personnav/bloodstock
+
+block content
+
+    each events in event
+            .field
+                .label EVENT NAME
+                .control
+                    td= events.strEVENT_DESC
+            .field
+                .label EVENT LOCATION
+                .control
+                    td= events.strEVENT_LOCATION
+            .field
+                .label EVENT DATE
+                .control
+                    td=events.dtmEVENT_DATETIME
+            .field
+                .label EVENT ORGANIZER
+                .control
+                    td= events.strBLOODBANK_NAME

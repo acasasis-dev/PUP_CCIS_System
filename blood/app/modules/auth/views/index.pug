@@ -1,0 +1,36 @@
+extends ../../../../templates/master
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Users
+    
+   
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th E-mail
+                th First Name
+                th Middle Name
+                th Last Name
+                th Birth Date
+                th Address
+                th Contact No.
+                th Actions
+        
+        tbody
+            each user in tblperson
+                tr
+                    td= user.intPERSON_ID
+                    td: a(href=`/admin/users/${user.intPERSON_ID}`)= user.strPERSON_EMAIL
+                    td= user.strPERSON_FN
+                    td= user.strPERSON_MN
+                    td= user.strPERSON_LN
+                    td= user.dtmPERSON_BDAY
+                    td= user.strPERSON_ADDRESS
+                    td= user.strPERSON_CONTACTNO
+                    td
+                        
+                        a(href=`/admin/users/${user.intPERSON_ID}/remove`): span.fa.fa-remove

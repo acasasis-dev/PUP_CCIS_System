@@ -1,0 +1,15 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} POST STATUS
+
+    form(method="POST" action=`${post ? `${post[0].intPOST_ID}?_method=POST` : ''}`)
+        .field
+            .label Post Status
+            .control    
+                select.input(name="status")     
+                    each status in tblpoststatus    
+                        option(value= status.intPOSTSTATUS_ID)= status.strSTATUS_DESCRIPTION
+        input.button.is-primary(type="submit" value="Submit")

@@ -1,0 +1,528 @@
+<html>
+
+<style>
+   
+   .text-color{
+       color:white;
+   }   
+    .modal-header {
+     text-align:center;
+     color:white;
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-weight:bold;   
+     font-size:20px;   
+    }
+    .modal-content1 {
+     border-radius:10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+    }
+    .modal-body 
+    .btn btn-primary btn-lg btn-block {
+     width: 435px;
+     height: 50px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border:3px solid crimson;
+     border-radius: 10px;
+     background-color: darkred;
+     font-size: 16px;
+     color:black;
+     resize:none;
+    }
+    btn btn-secondary {
+        width: 435px;
+     height: 50px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border:3px solid crimson;
+     border-radius: 10px;
+     background-color: white;
+     font-size: 16px;
+     resize:none;
+    }
+    input[type=text] {
+     width: 235px;
+     height: 50px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border:3px solid crimson;
+     border-radius: 10px;
+     background-color: white;
+     font-size: 16px;
+     resize:none;
+    }
+    input[type=password] {
+     width: 235px;
+     height: 50px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border:3px solid crimson;
+     border-radius: 10px;
+     background-color: white;
+     font-size: 16px;
+     resize:none;
+    }
+    .modal-content2 {
+     
+     border-radius:10px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 400px;
+    }
+    .modal-content3 {
+     
+     border-radius:10px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 400px;
+    }
+    .container-fluid {
+        background-color:maroon;
+    
+    }
+    .header {
+        background-color:black;
+        font-family:Courier New, Courier, monospace;
+        font-size:50px;
+        color:red;
+    }
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+       display: block;
+       height: auto;
+       max-width: 100%;
+       line-height: 1;
+       margin:auto;
+       width: 100%;
+            }
+    
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <header>
+    
+                
+    </header> 
+    <div class="container1">
+       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="#">
+    <img src="/assets/yst.gif" width="40" height="40" class="d-inline-block align-top" alt="">
+    You're Somebody's Type
+  </a>
+   </a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="\login">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/member/bloodstock">Blood Bank and Stocks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/bloodbank/event/viewevent">Events</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+      <span class="glyphicon glyphicon-search"></span>Search
+      </button>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="\signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      </ul>
+    </form>
+  </div>
+</nav>
+</div>
+              
+    <!--CB-modal -->
+    <!-- Button trigger modal -->
+    <!-- Button trigger modal -->
+    
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+      <div class="modal-content1">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+               <img src="/assets/yst.gif" width="60" height="60" class="d-inline-block align-top" alt="">
+            <h1 style="margin-left:20px;"><span class="glyphicon glyphicon-user"></span>&nbsp;Login</h1>
+          </div>
+          <div class="modal-body">
+              <form class="form col-md-12 col-sm-6 center-block" method="POST" action="/login">
+                <div class="form-group">
+                  <input type="text" class="form-control input-lg" placeholder="Email" name="email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control input-lg" placeholder="Password" name="password">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign In</button>
+                  <!--<span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>-->
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-trash"></span>&nbsp;Clear</button>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <div class="col-md-12">
+              <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Cancel</button>
+          </div>	
+          </div>
+      </div>
+      </div>
+    </div>
+    
+    <!-- JS code -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+    </script>
+    <!--JS below-->
+    
+    
+    <!--modal-->
+    <script>
+      $(document).ready(function() {
+        $("#myModal").modal();
+      });
+    </script>
+    
+    
+    <body>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="carousel slide" id="carousel-152429">
+                    <ol class="carousel-indicators">
+                      <li data-slide-to="0" data-target="#carousel-152429">
+                      </li>
+                      <li data-slide-to="1" data-target="#carousel-152429" class="active">
+                      </li>
+                      <li data-slide-to="2" data-target="#carousel-152429">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="item">
+                        <img alt="Carousel Bootstrap First" src="\assets\img1.jpg" style="height:430px;width:1440px"/>
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="item active">
+                        <img alt="Carousel Bootstrap Second" src="\assets\img2.jpg" style="height:430px;width:1440px"/>
+                        <div class="carousel-caption">                           
+                        </div>
+                        
+                      </div>
+                      <div class="item">
+                        <img alt="Carousel Bootstrap Third" src="\assets\img3.jpg" style="height:430px;width:1440px"/>
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div> <a class="left carousel-control" href="#carousel-152429" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-152429" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+            <div>
+              
+              <style>
+                #inner {
+                  display: table;
+                  margin: 0 auto;
+                }
+                h4 {
+                  font-size:20px;
+                  font-weight:bold;
+                 
+                }
+                .draw-border {
+                 box-shadow: inset 0 0 0 4px #000000;
+                 color: #000000;
+                 -webkit-transition: color 0.25s 0.08333s;
+                 transition: color 0.25s 0.08333s;
+                 position: relative;
+                }
+                .draw-border::before, .draw-border::after {
+                 border: 0 solid transparent;
+                 box-sizing: border-box;
+                 content: '';
+                 pointer-events: none;
+                 position: absolute;
+                 width: 0;
+                 height: 0;
+                 bottom: 0;
+                 right: 0;
+                }
+                .draw-border::before {
+                 border-bottom-width: 4px;
+                 border-left-width: 4px;
+                }
+                .draw-border::after {
+                 border-top-width: 4px;
+                 border-right-width: 4px;
+                }
+                .draw-border:hover {
+                 color: #FF0000;
+                }
+                .draw-border:hover::before, .draw-border:hover::after {
+                 border-color: #FF0000;
+                 -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+                 transition: border-color 0s, width 0.25s, height 0.25s;
+                 width: 100%;
+                 height: 100%;
+                }
+                .draw-border:hover::before {
+                 -webkit-transition-delay: 0s, 0s, 0.25s;
+                  transition-delay: 0s, 0s, 0.25s;
+                }
+                .draw-border:hover::after {
+                 -webkit-transition-delay: 0s, 0.25s, 0s;
+                 transition-delay: 0s, 0.25s, 0s;
+                }
+                .btn {
+                 background: none;
+                 border: none;
+                 cursor: pointer;
+                 line-height: 1.5;
+                 font: 700 1.2rem 'Roboto Slab', sans-serif;
+                 padding: 1em 2em;
+                 letter-spacing: 0.05rem;
+                }
+                .btn:focus {
+                  outline: 2px solid red;
+                }
+              </style>
+              <div id="outer" style="width:100%">
+                  <div id="inner">
+                    
+                      <br/>
+                        &nbsp
+                      <button type="button" class="btn draw-border"  data-toggle="modal" data-target="#myModal">
+                          LOGIN
+                      </button>
+                        &nbsp
+                     
+                  </div>
+                </div>
+              <style>
+                .title {
+                font-family:Arial, Helvetica, sans-serif;
+                text-align:center;
+                color:crimson;
+                font-size:30px;
+                text-shadow: 0 0 5px #FF0000;
+                }
+                .line {
+                  -webkit-text-stroke-width: 2;
+                  -webkit-text-stroke-color: crimson;
+                }
+                .primary-font {
+                    color:white;
+                }
+                </style>
+            </div>
+           <div id="main-content" class="container-fluid" style="margin: 40px auto;">    
+
+       <div class="row">
+            <div class="col-sm-12">
+                <div class="center">
+                    <div class="title">GIVE BLOOD</div>
+                    <div class="line"></div> 
+                </div>
+
+                <div style="margin: 30px 0;"> &nbsp; </div>
+
+                <div class="row features" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:500}">
+                    <div class="col-sm-6">
+                        <div class=""><img src="\assets\donation.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 class="primary-font">Do's and Dont's <span></span></h2>
+                        <p class="text-muted">Preparation before donating blood:<br> Have enough rest and sleep.<br>
+                          2. No alcohol intake 24 hours prior to blood donation.<br>
+                          3. No medications for at least 24 hours prior to blood donation.<br>
+                          4. Have something to eat prior to blood donation, avoid fatty food.<br>
+                          5. Drink plenty of fluid, like water or juice.</p>
+                    </div>
+                </div> <!-- / .row -->
+                        <div class="divider"></div>
+
+                <div class="row features" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}">
+                    <div class="col-sm-6">
+                        <h2 class="primary-font first-child">How to Donate</h2>
+                       
+                        <p class="text-muted"> <br>1. Have your weight taken.<br>
+                          2. Register and honestly and complete the donor registration form.<br>
+                          3. Have your blood type and hemoglobin checked.<br>
+                          4. A physician will conduct a blood donor examination.<br>
+                          5. Actual donation--the amount of blood to be donated (either 350cc or 450cc) will depend on the donor's weight and blood pressure. It usually takes 10 minutes or less.6. A 5 to 10 minute rest and plenty of fluid-intake are necessary after donation.</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <img id="demo_vimeo" src="\assets\preparation.jpg" alt="Vimeo" class="img-responsive" />         
+                    </div>
+                </div> <!-- / .row -->
+                 <div class="row features" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:500}">
+                    <div class="col-sm-6">
+                        <div class=""><img src="\assets\bloodtype.jpg" class="img-responsive"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 class="primary-font">Blood Types <span></span></h2>
+                        <p class="text-muted"><br>What’s Your Type?<br>O+ &nbsp
+                            A+     &nbsp
+                            B+     &nbsp
+                            AB+    &nbsp
+                            O-     &nbsp
+                            A-     &nbsp
+                            B-     &nbsp
+                            AB-     <br>
+                            Compatible Blood Types<br>
+                            O- can receive O- <br>
+                            O+ can receive O+, O-<br>
+                            A- can receive A-, O-<br>
+                            A+ can receive A+, A-, O+, O-<br>
+                            B- can receive B-, O-<br>
+                            B+ can receive B+, B-, O+, O-<br>
+                            AB- can receive AB-, B-, A-, O-<br>
+                            AB+ can receive AB+, AB-, B+, B-, A+,  A-,  O+,  O-<br>
+                            Compatible Plasma Types<br>
+                            O  can receive O, A, B, AB<br>
+                            A  can receive A, AB<br>
+                            B  can receive B, AB<br>
+                            AB  can receive AB<br></p>
+                    </div>
+                </div> <!-- / .row -->
+                 <div class="clearfix"></div>
+
+    <div class="container"> 
+        <div class="row" style="padding: 50px 0 30px;">
+            <div class="col-sm-12">
+                <div class="center">
+                    <div class="title">OUR CLIENTS</div> 
+                    <div class="subtitle"></div> 
+                    <div class="line"></div> 
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-1">
+                            <div class="team-member text-center">
+                                <img class="img-responsive center-block" src="\assets\pup.png" /> 
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="team-member text-center">
+                                <img class="img-responsive center-block" src="\assets\it.png" />
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="team-member text-center">
+                                <img class="img-responsive center-block" src="\assets\prc1.svg">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="team-member text-center">
+                                <img class="img-responsive center-block" src="\assets\world.png">
+                            </div>
+                        </div>
+                           <div class="col-sm-2">
+                            <div class="team-member text-center">
+                                <img class="img-responsive center-block" src="\assets\doh.png">
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+             </div>
+                <br>
+                <hr>
+                     <!-- Footer -->
+                    <style>
+                      .footer {                      
+                       background-color:black;
+                       color:white;
+                       clear:both;
+                       text-align: center;
+                      
+                      }
+                       </style>
+                      
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Contact Us -->
+            <div class="col-sm-4">
+                <h3 class="text-color"><span class="border-color">Contact Us</span></h3>
+                <div class="content">
+                    <p>
+                        Polytechnic University of the Philippines <br />
+                        Sta. Mesa, Manila <br />
+                        000-000-000 <br />
+                        Email: yst@yahoo.com<span class="__cf_email__"> </span></a>
+                        <a href="#">
+                        <span class="glyphicon glyphicon-envelope"></span>
+        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Social icons -->
+            <div class="col-sm-4">
+                <h3 class="text-color"><span>Go Social</span></h3>
+                <div class="content social">
+                    <p>Stay in touch with us:</p>
+                    <ul class="list-inline">
+                        <li><a href="" class="twitter"><img src="/assets/twitter.png" width="50" height="50" class="d-inline-block align-top" alt=""></a></li>
+                       <li><a href="" class="twitter"><img src="/assets/facebook.png" width="50" height="50" class="d-inline-block align-top" alt=""></a></li>  
+                       <li><a href="" class="twitter"><img src="/assets/yahoo.png" width="50" height="50" class="d-inline-block align-top" alt=""></a></li>
+                       <li><a href="" class="twitter"><img src="/assets/gmail.png" width="50" height="50" class="d-inline-block align-top" alt=""></a></li>
+                       <li><a href="" class="twitter"><img src="/assets/youtube.png" width="50" height="50" class="d-inline-block align-top" alt=""></a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+                <!-- Services -->
+            <div class="col-sm-4">
+                <h3 class="text-color"><span>Services</span></h3>
+                <div class="content">
+                    <ul class="list">
+                        <li><a href="" title="Blood Letting"><b>Blood Letting</b></a></li>
+                        <li><a href="" title="Disaster Management Services"><b>Disaster Management Services</b></a></li>
+                        <li><a href="" title="Health Services"><b>Health Services</b></a></li> 
+                        <li><a href="" title="Red Cross Youth"><b>Red Cross Youth</b></a></li> 
+                        
+                                            </ul>  
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+            </div>
+        </div>
+        <!-- Copyrights -->
+        <div class="row">
+            <div class="col-sm-12">
+                <p>&copy; YST Co.</a> 2017 - 2018 All Rights Reserved 
+                    <a href="">Privacy Policy</a> | <a href="">Service Terms & Conditions</a> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+         </body>
+</html>

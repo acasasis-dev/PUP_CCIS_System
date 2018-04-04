@@ -1,0 +1,44 @@
+   a
+{
+    height: 50px;
+}
+.button
+{
+    background-color: #F14141;
+    color: #fff;
+    border: none;
+    margin-left: 40%;
+}
+a.button 
+{
+    
+    color: #000000;
+    border: none;
+    text-decoration: none;
+}
+.button:hover
+{
+    background-color: darkred;
+    color: #fff;
+    border: none;
+}
+
+.container {
+    width: 50%;
+    height:460px;
+    
+    text-align: left;
+    border: 5px solid #B22222;
+    border-radius: 10px;
+}
+.label {
+    color: #000000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+}
+.space {
+    background-color: white;
+    margin: 10px 0 10px 0;
+    padding: 0px;
+} 
+  

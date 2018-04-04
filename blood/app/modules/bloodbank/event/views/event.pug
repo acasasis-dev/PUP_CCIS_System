@@ -1,0 +1,35 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Events
+    
+    a.button.is-primary.pull-right(href="/bloodbank/event/newevent")
+        span.fa.fa-plus
+        | &nbsp; Add Event
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Event Description
+                th Location
+                th Date/Time
+                th Actions
+                
+        
+        tbody
+            each events in tblevents
+                tr
+                    td= events.intEVENT_ID
+                    td= events.strEVENT_DESC
+                    td= events.strEVENT_LOCATION
+                    td= events.dtmEVENT_DATETIME
+                    td
+                        a(href=`/bloodbank/event/${events.intEVENT_ID}`): span.fa.fa-edit
+                        | &nbsp;
+                        a(href=`/bloodbank/event/${events.intEVENT_ID}/remove`): span.fa.fa-remove
+    br

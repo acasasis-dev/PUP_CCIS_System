@@ -1,0 +1,17 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; Message
+    form(method="POST" action=`${tblbloodbank[0] ? `${tblbloodbank[0].intACCOUNT_ID}?_method=POST` : ''}`)
+        .field
+            .label Subject
+            .control
+                input.input(placeholder="Subject" type="text" name="subject" value= tblperson ? tblperson.strtblperson_CONTENT : '' required)
+        .field
+            .label Content
+            .control
+                input.input(placeholder="Content" type="text" name="content" value= tblperson ? tblperson.strtblperson_CONTENT : '' required)
+        input.button.is-primary(type="submit" value="Submit")
+    br

@@ -1,0 +1,33 @@
+<html>
+<body>
+    <table id="table" >  
+        <thead>  
+            <tr>  
+                <th>ID</th>  
+                <th>Email</th>  
+                <th>Blood Bank Name</th>
+                <th>Location</th>
+                <th>Contact 1</th>
+                <th>Contact 2</th>
+                <th>Contact 3</th>
+                <th>Actions</th>
+            </tr>  
+        </thead>  
+         <tbody>  
+         <% forEach(function (user) { %>
+            <tr>  
+                <td><%= user.intBLOODBANK_ID %></td>  
+                <td><%= user.strBLOODBANK_NAME %></td>
+                <td><%= user.strBLOODBANK_LOCATION %></td>
+                <td><%= user.strBLOODBANK_CONTACT1 %></td>
+                <td><%= user.strBLOODBANK_CONTACT2 %></td>
+                <td><%= user.strBLOODBANK_CONTACT3 %></td>
+                <td><%= user.strBLOODBANK_EMAIL %></td>
+                <td><%= user.strBLOODBANK_PASSWORD %></td>
+            </tr>                                   
+         <% }) %>
+         </tbody>
+    </table>   
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    <br>
+    <br>
+    h1.title
+        | &nbsp; &nbsp;
+        span.fa.fa-users
+        | &nbsp; Reservations
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Name
+                th Blood Type
+                th Blood Component
+                th Quantity
+                th Date Reserved
+                th Deadline
+                th Actions
+                
+        
+        tbody
+            each reserves in reserve
+                tr
+                    td= reserves.intBLOODRESERVE_ID
+                    td= reserves.strPERSON_FN+' '+reserves.strPERSON_MN+' '+reserves.strPERSON_LN
+                    td= reserves.strBLOODTYPE_DESCRIPTION
+                    td= reserves.strBLOODCOMPONENT_DESCRIPTION
+                    td= reserves.strQUANTITY
+                    td= reserves.dtmRESERVE_DATE
+                    td= reserves.dtmDEADLINE_DATE
+                    td
+                        a(href=`/bloodbank/reservation/${reserves.intBLOODRESERVE_ID}`): span.fa.fa-edit
+                        | &nbsp;
+                        a(href=`/bloodbank/reservation/${reserves.intBLOODRESERVE_ID}/remove`): span.fa.fa-remove
+    br

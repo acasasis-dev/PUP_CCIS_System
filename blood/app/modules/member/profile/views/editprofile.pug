@@ -1,0 +1,33 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        |Edit Profile
+    each user in tblperson
+        form(method="POST" action=`/member/profile/${user.intACCOUNT_ID}`)
+            .field
+                .label First Name
+                .control
+                    input.input(type="text" name="fn" value= user ? user.strPERSON_FN : '')
+            .field
+                .label Middle Name
+                .control
+                    input.input(type="text" name="mn" value= user ? user.strPERSON_MN : '')
+            .field
+                .label Last Name
+                .control
+                    input.input(type="text" name="ln" value= user ? user.strPERSON_LN : '')
+            .field
+                .label Address
+                .control
+                    input.input(type="text" name="address" value= user ? user.strPERSON_ADDRESS : '')
+            //- .field
+            //-     .label Birth Date
+            //-     .control
+            //-         input.input(type="datetime" name="date" value= user ? user.dtmPERSON_BDAY : '')
+            .field
+                .label Contact Number
+                .control
+                    input.input(type="text" name="contact" value= user ? user.strPERSON_CONTACTNO : '')
+            input.button.is-primary(type="submit" value="Submit")

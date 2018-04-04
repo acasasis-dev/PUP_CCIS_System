@@ -1,0 +1,28 @@
+extends ../../../../templates/adminnav/adminnav
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Admin Accounts
+    
+    a.button.is-primary.pull-right(href="/admin/account/addadmin")
+        span.fa.fa-plus
+        | &nbsp; Add Admin Account
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th E-mail
+                th Admin Name
+                th Contact No.
+            tr
+        tbody
+            each user in tbladmin
+                tr
+                    td= user.intADMIN_ID
+                    td= user.strACCOUNT_EMAIL
+                    td= user.strADMIN_FN+' '+user.strADMIN_MN+' '+user.strADMIN_LN
+                    td= user.strADMIN_CONTACT
+                tr
+    br
+    br

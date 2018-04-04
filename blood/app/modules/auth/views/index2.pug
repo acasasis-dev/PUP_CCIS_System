@@ -1,0 +1,47 @@
+extends ../../../templates/bloodbank/bloodbanknav
+
+block content
+
+    link(rel="stylesheet" href="/styles/homebloodbank.css")
+
+    body
+
+    each posts in post
+        br
+        br
+        div(class="container")
+            br
+            br
+            .field
+                .label NAME:
+                    td= posts.strPERSON_FN+' '+posts.strPERSON_LN
+            .field
+                .label BLOOD COMPONENT:
+                    td= posts.strBLOODCOMPONENT_DESCRIPTION
+            .field
+                .label BLOOD TYPE:
+                    td=posts.strBLOODTYPE_DESCRIPTION
+            .field
+                .label DATE:
+                    td= posts.dtmPOST_DATE
+            .field
+                .label CONTENT:
+                    td= posts.strPOST_CONTENT
+            .field
+                .label STATUS:
+                    td= posts.strSTATUS_DESCRIPTION
+            .field
+                .label
+                    td
+                        a(href=`/bloodbank/poststatus/${posts.intPOST_ID}` class="button" role="button") EDIT STATUS
+        //- .field
+        //-     .label Contact Number
+        //-     .control
+        //-         td= user.strPERSON_CONTACTNO
+        
+    div(class="row")
+        div(class="col-sm-12")
+            p
+                a YST Co. &copy; 2017 - 2018 All Rights Reserved 
+                a(href="") Privacy Policy | 
+                a(href="") Service Terms & Conditions

@@ -1,0 +1,39 @@
+ ul {
+    list-style-type: none;
+    /* overflow: auto; */
+  }
+   
+  li {
+    height: 25px;
+    float: left;
+    margin-right: 0px;
+    border-right: 1px solid #000000;
+    padding: 0 20px;
+    text-decoration: none;
+  }
+   
+  li:last-child {
+    border-right: none;
+  }
+   
+  li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font: 20px/1 Helvetica, Verdana, sans-serif;
+    text-transform: uppercase;
+   
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+   
+  li a:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+   
+  li.active a {
+    color: #000000;
+  }

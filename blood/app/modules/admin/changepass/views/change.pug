@@ -1,0 +1,17 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; Account Settings
+    form(method="POST" action=`/admin/changepass${tblaccounts ? `/${tblaccounts[0].intACCOUNT_ID}?_method=POST` : ''}`)
+        .field
+            .label Account Email
+            .control    
+                    td= tblaccounts[0].strACCOUNT_EMAIL
+        .field
+            .label Change Password
+
+        a(href=`/admin/changepass/${tblaccounts[0].intACCOUNT_ID}`)
+            button.button.is-primary(type="button") Change Password
+    br

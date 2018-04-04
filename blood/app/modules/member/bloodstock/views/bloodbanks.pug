@@ -1,0 +1,43 @@
+extends ../../../../templates/personnav/personnav
+
+block content
+    each stocks in tblbloodbank
+        .field    
+            .label Blood Bank Name:
+            .control
+                td= stocks.strBLOODBANK_NAME
+        .field    
+            .label Location:
+            .control
+                td= stocks.strBLOODBANK_LOCATION
+        a( href=`${stocks.gloc_link}` ) View location
+        .field 
+            .label Contact no. 1:
+            .control
+                td= stocks.strBLOODBANK_CONTACT1
+        .field
+            .label Contact no. 2:
+            .control
+                td= stocks.strBLOODBANK_CONTACT2
+        .field
+            .label Contact no. 3:
+            .control
+                td= stocks.strBLOODBANK_CONTACT3 
+        field
+            .label
+                td
+                    a(href=`/member/bloodstock/${stocks.intBLOODBANK_ID}`) See Stocks
+    br
+    //- table.table.is-fullwidth
+    //-     thead
+    //-         th Blood Bank Name
+    //-         th Stocks
+            
+    //-     tbody
+    //-     each stocks in tblbloodbank
+    //-             tr
+    //-                 th= stocks.strBLOODBANK_NAME
+    //-                 td
+    //-                     | &nbsp;
+    //-                     a(href=`/member/bloodstock/${stocks.intBLOODBANK_ID}`) See Stocks
+                

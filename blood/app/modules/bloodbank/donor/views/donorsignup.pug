@@ -1,0 +1,42 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Donor
+
+    form(method="POST" action=`/bloodbank/donor/donorform${tblevents ? `${tblevents.intEVENT_ID}?_method=POST` : ''}`)
+        .field
+            .label Email
+            .control
+                input.input(type="text" name="email" placeholder="Email" value= tblevents ? tblevents.strEVENT_DESC : '' required)
+        .field
+            .label Password
+            .control
+                input.input(type="password" name="password" placeholder="Password" value= tblevents ? tblevents.strEVENT_LOCATION : '' required)
+        .field
+            .label Name
+            .control
+                input.input(type="text" name="fn" placeholder="First Name" value= tblevents ? tblevents.strEVENT_LOCATION : '' required)
+                input.input(type="text" name="mn" placeholder="Middle Name" value= tblevents ? tblevents.strEVENT_LOCATION : '')
+                input.input(type="text" name="ln" placeholder="Last Name" value= tblevents ? tblevents.strEVENT_LOCATION : '' required)
+        .field
+            .label Birth Date
+            .control
+                input.input(type="date" name="date" placeholder="Birth Date" value= tblevents ? tblevents.dtmEVENT_DATETIME : '' required)
+        .field
+            .label Address
+            .control
+                input.input(type="text" name="address" placeholder="Address" value= tblevents ? tblevents.strEVENT_DESC : '' required)
+        .field
+            .label Contact Number
+            .control
+                input.input(type="text" name="contactnum" placeholder="Contact Number" value= tblevents ? tblevents.strEVENT_DESC : '' required)
+        .field
+            .label Blood Type
+            .control    
+                    select.input(name="type")     
+                        each types in tblbloodtype     
+                            option(value= types.intBLOODTYPE_ID)= types.strBLOODTYPE_DESCRIPTION
+        input.button.is-primary(type="submit" value="Submit")
+    br

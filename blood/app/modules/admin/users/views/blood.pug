@@ -1,0 +1,43 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    div.container-fluid
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Blood Bank Accounts
+    
+    a.button.is-primary.pull-right(href="/admin/users/bb")
+        span.fa.fa-plus
+        | &nbsp; Add Blood Bank Account
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th E-mail
+                th Blood Bank Name
+                th Location
+                th Contact No 1
+                th Contact No 2
+                th Contact No 3
+                th Actions
+        
+        tbody
+            each user in tblbloodbank
+                tr
+                    td= user.intBLOODBANK_ID
+                    td= user.strACCOUNT_EMAIL
+                    td= user.strBLOODBANK_NAME
+                    td= user.strBLOODBANK_LOCATION
+                    td= user.strBLOODBANK_CONTACT1
+                    td= user.strBLOODBANK_CONTACT2
+                    td= user.strBLOODBANK_CONTACT3
+                    td
+                        | &nbsp;
+                        a.button.is-primary.pull-right(href=`/admin/users/blood/${user.intBLOODBANK_ID}/remove`): span.fa.fa-remove 
+                        
+                        a.button.is-primary.pull-right(href=`/admin/bloodstock/${user.intBLOODBANK_ID}`)
+                            | &nbsp; Stocks
+                        //- a(href=`/admin/users/blood/${user.intBLOODBANK_ID}/remove`): span.fa.fa-remove
+                        //- a(href=`/admin/users/addstock/${user.intBLOODBANK_ID}`) Add Stock
+                        //- a(href=`/admin/bloodstock/${user.intBLOODBANK_ID}`) Stocks
+    br

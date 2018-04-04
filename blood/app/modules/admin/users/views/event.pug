@@ -1,0 +1,31 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Events
+    
+    a.button.is-primary.pull-right(href="/admin/users/newevent")
+        span.fa.fa-plus
+        | &nbsp; Add Event
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th Event Description
+                th Location
+                th Date/Time
+                
+        
+        tbody
+            each events in tblevents
+                tr
+                    td= events.intEVENT_ID
+                    td= events.strEVENT_DESC
+                    td= events.strEVENT_LOCATION
+                    td= events.dtmEVENT_DATETIME
+                    td
+                        a(href=`/admin/users/events/${events.intEVENT_ID}`): span.fa.fa-edit
+                        | &nbsp;
+                        a(href=`/admin/users/events/${events.intEVENT_ID}/remove`): span.fa.fa-remove

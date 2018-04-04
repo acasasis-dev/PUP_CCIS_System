@@ -1,0 +1,44 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{tblperson ? 'Edit': 'Add'} User
+
+    form(method="POST" action=`/admin/tblpersons${tblperson ? `/${tblperson.id}?_method=PUT` : ''}`)
+        .field
+            .label First Name
+            .control
+                input.input(type="text" name="fn" value= tblperson ? tblperson.strPERSON_FN : '')
+        .field
+            .label Middle Name
+            .control
+                input.input(type="text" name="mn" value= tblperson ? tblperson.strPERSON_MN : '')
+        .field
+            .label Last Name
+            .control
+                input.input(type="text" name="ln" value= tblperson ? tblperson.strPERSON_LN : '')
+        
+        .field
+            .label E-mail
+            .control
+                input.input(type="email" name="email" value= tblperson ? tblperson.strPERSON_EMAIL : '')
+        .field
+            .label Birth Date
+            .control
+                input.input(type="date" name="date" value= tblperson ? tblperson.dtmPERSON_BDAY : '')
+        .field
+            .label Address
+            .control
+                input.input(type="text" name="address" value= tblperson ? tblperson.strPERSON_ADDRESS : '')
+        .field
+            .label Contact No
+            .control
+                input.input(type="number" name="contact" value= tblperson ? tblperson.strPERSON_CONTACTNO : '')
+        
+        if !tblperson
+            .field
+                .label Password
+                .control
+                    input.input(type="password" name="password")
+        input.button.is-primary(type="submit" value="Submit")

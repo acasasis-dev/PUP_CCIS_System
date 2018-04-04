@@ -1,0 +1,26 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; donors
+    
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th First Name
+                th Middle Name
+                th Last Name
+                th Blood Type
+                
+        
+        tbody
+            each donors in donor
+                tr
+                    td= donors.intDONOR_ID
+                    td= donors.strPERSON_FN
+                    td= donors.strPERSON_MN
+                    td= donors.strPERSON_LN
+                    td= donors.strBLOODTYPE_DESCRIPTION

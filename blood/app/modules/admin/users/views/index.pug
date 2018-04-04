@@ -1,0 +1,33 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Users
+    
+    table.table.is-fullwidth
+        thead
+            tr
+                th ID
+                th E-mail
+                th First Name
+                th Middle Name
+                th Last Name
+                th Birth Date
+                th Address
+                th Contact No.
+        
+        tbody
+            each user in tblperson
+                tr
+                    td= user.intPERSON_ID
+                    td= user.strACCOUNT_EMAIL
+                    td= user.strPERSON_FN
+                    td= user.strPERSON_MN
+                    td= user.strPERSON_LN
+                    td= user.dtmPERSON_BDAY
+                    td= user.strPERSON_ADDRESS
+                    td= user.strPERSON_CONTACTNO
+                    
+    br

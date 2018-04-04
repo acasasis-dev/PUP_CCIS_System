@@ -1,0 +1,25 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    each mess in adminmessage
+        br
+        br
+        div(class="container")
+            br
+            br
+            .field
+                .label EMAIL:
+                    td= mess.strACCOUNT_EMAIL
+            .field
+                .label SUBJECT:
+                    td= mess.strMESSAGE_SUBJ
+            .field
+                .label CONTENT:
+                    td= mess.strMESSAGE_CONTENT
+            .field
+                .label DATE:
+                    td= mess.dtmMESSAGE_DATE
+            .field
+                .label 
+                    td
+                        a(href=`/admin/message/${mess.intACCOUNT_ID}`) Reply

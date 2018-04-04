@@ -1,0 +1,21 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} Blood Bank Event
+
+    form(method="POST" action=`/admin/users/events${tblevents ? `/${tblevents.intEVENT_ID}?_method=POST` : ''}`)
+        .field
+            .label Event Description
+            .control
+                input.input(type="text" name="desc" value= tblevents ? tblevents.strEVENT_DESC : '')
+        .field
+            .label Event Location
+            .control
+                input.input(type="text" name="loc" value= tblevents ? tblevents.strEVENT_LOCATION : '')
+        .field
+            .label Event Date
+            .control
+                input.input(type="datetime-local" name="date" value= tblevents ? tblevents.dtmEVENT_DATETIME : '')
+        input.button.is-primary(type="submit" value="Submit")

@@ -1,0 +1,42 @@
+extends ../../../templates/personnav/personnav
+
+block content
+
+    link(rel="stylesheet" href="/styles/homeperson.css")
+
+    body
+
+    each post in posts
+        br
+        br
+        div(class="container")
+            br
+            br
+            .field
+                .label NAME:
+                    td= post.strPERSON_FN+' '+post.strPERSON_LN
+            .field
+                .label BLOOD COMPONENT:
+                    td= post.strBLOODCOMPONENT_DESCRIPTION
+            .field
+                .label BLOOD TYPE:
+                    td=post.strBLOODTYPE_DESCRIPTION
+            .field
+                .label DATE:
+                    td= post.dtmPOST_DATE
+            .field
+                .label CONTENT:
+                    td= post.strPOST_CONTENT
+            .field
+                .label STATUS:
+                    td= post.strSTATUS_DESCRIPTION
+        form( method="POST" action="/home/member" )
+            input( type="hidden" value=`${post.intPOST_ID}` name="post_id")
+            button( type="submit" class="button" ) RESPOND
+
+    div(class="row")
+        div(class="col-sm-12")
+            p
+                a YST Co. &copy; 2017 - 2018 All Rights Reserved 
+                a(href="") Privacy Policy | 
+                a(href="") Service Terms & Conditions

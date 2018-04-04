@@ -1,0 +1,26 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Blood Stock
+    table.table.is-fullwidth
+        thead
+            th Blood Component
+            each stock in stocks
+                th= stock.strBLOODTYPE_DESCRIPTION
+            th Price  
+            th Actions
+        
+        tbody
+            each stock in stocks
+                tr
+                    th= stocks.strBLOODCOMPONENT_DESCRIPTION
+                    each stock in stocks     
+                        th= stock.strBLOODSTOCK_COUNT
+                    th= stocks.strBLOODSTOCK_PRICE
+                    th
+                        a(href=`/admin/users/${stocks.intBLOODSTOCK_ID}`): span.fa.fa-edit
+                        | &nbsp;
+                        a(href=`/admin/users/${stocks.intBLOODSTOCK_ID}/remove`): span.fa.fa-remove

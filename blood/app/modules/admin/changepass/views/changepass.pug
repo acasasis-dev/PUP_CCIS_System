@@ -1,0 +1,17 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; Account Settings
+    form(method="POST" action=`${tblaccounts ? `${tblaccounts[0].intACCOUNT_ID}?_method=POST` : ''}`)
+        .field
+            .label Previous Password
+            .control    
+                    input.input(placeholder="Previous Password" type="password" name="prevpass" value= post ? post.strPOST_CONTENT : '' required)
+        .field
+            .label New Password
+            .control
+                input.input(placeholder="New Password" type="password" name="newpass" value= post ? post.strPOST_CONTENT : '' required)
+        input.button.is-primary(type="submit" value="Submit")
+    br

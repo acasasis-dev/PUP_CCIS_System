@@ -1,0 +1,33 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        | Blood Bank Profile
+
+    each user in bloodbanks
+        .field
+            .label Blood Bank Name
+            .control
+                td= user.strBLOODBANK_NAME
+        .field
+            .label Blood Bank Category
+            .control
+                td= user.strCATEGORY_NAME
+        .field
+            .label Location
+            .control
+                td=user.strBLOODBANK_LOCATION
+        .field
+            .label Contact No. 1
+            .control
+                td= user.strBLOODBANK_CONTACT1
+        .field
+            .label Contact No. 2
+            .control
+                td= user.strBLOODBANK_CONTACT2
+        .field
+            .label Contact No. 3
+            .control
+                td= user.strBLOODBANK_CONTACT3
+        
+        a.button.is-primary(href=`profile/${user.intBLOODBANK_ID}`) EDIT

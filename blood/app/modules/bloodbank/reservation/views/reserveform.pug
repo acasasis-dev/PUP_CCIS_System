@@ -1,0 +1,14 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} RESERVATION
+
+    form(method="POST" action=`${reserve ? `${reserve.intBLOODRESERVE_ID}?_method=POST` : ''}`)
+        .field
+            .label Deadline Date
+            .control
+                input.input(type="datetime-local" name="date" value= reserve ? reserve.dtmDEADLINE_DATE : '' required)
+        input.button.is-primary(type="submit" value="Submit")
+    br

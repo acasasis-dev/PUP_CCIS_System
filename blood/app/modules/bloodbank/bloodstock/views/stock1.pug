@@ -1,0 +1,40 @@
+extends ../../../../templates/bloodbank/bloodbanknav
+
+block content
+    
+    h1.title
+        span.fa.fa-users
+        | &nbsp; Blood Stock
+        a.button.is-primary.pull-right(href=`/admin/users/addstock/${stocks[0].intBLOODBANK_ID}`)
+            | &nbsp; Add Stock
+        table.table.is-fullwidth
+            thead
+                th Blood Component
+                th A+
+                th A-
+                th B+
+                th B-
+                th AB+
+                th AB-
+                th O+
+                th O-
+                th Blood Service Fee  
+                th Actions
+            
+            tbody
+                each stock in stocks
+                    tr
+                        th= stock.strBLOODCOMPONENT_DESCRIPTION
+                        th= stock.intBLOODSTOCK_AP
+                        th= stock.intBLOODSTOCK_AN
+                        th= stock.intBLOODSTOCK_BP
+                        th= stock.intBLOODSTOCK_BN
+                        th= stock.intBLOODSTOCK_ABP
+                        th= stock.intBLOODSTOCK_ABN
+                        th= stock.intBLOODSTOCK_OP
+                        th= stock.intBLOODSTOCK_ON
+                        th= stock.dblBLOODSTOCK_PRICE
+                        th
+                            a(href=`/bloodbank/bloodstock/${stock.intBLOODSTOCK_ID}`): span.fa.fa-edit
+                            | &nbsp;
+        br                    

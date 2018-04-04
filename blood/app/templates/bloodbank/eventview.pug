@@ -1,0 +1,62 @@
+//- This is the master template. Basically all the other pages will
+//- extend this. This btw, is a Pug comment. This will not appear
+//- in your browser when you render the HTML.
+
+//- See here that I modified this a bit so I can use the base
+//- template for the login page
+extends ./base
+
+    
+block body
+    // I'm using Bulma's classes here.
+    // Refer to this: http://bulma.io/documentation/layout/container/
+    link(rel="stylesheet" href="/assets/bulma/master.css")
+    link(rel="stylesheet" href="/styles/bloodbank/menubar.css")
+    nav.navbar
+        div.navbar-brand
+            a(href="/home/bloodbank")
+                div.fa.fa-mail-reply
+            a.yst(href="/home/bloodbank")
+                <img src="/assets/yst.gif" width="45" height="45" class="d-inline-block align-top" alt="">You're Somebody's Type
+        a.ystsub(href="/home/bloodbank")    
+            div.subtitle Because Saving Lives Matter.
+        
+        div.navbar-menu
+            div.navbar-start
+                //- div.navbar-item.has-dropdown.is-hoverable
+                //-     a.navbar-link(href="/admin") Admin
+                //-     div.navbar-dropdown.is-right
+                //-         a.navbar-item(href="/admin/users") Users 
+            //- ul
+            //-     //- li(class="active")
+            //-     //-     a(href="/admin/users") Member Accounts
+            //-     li
+            //-         a(href="/admin/users") Member Accounts
+            //-     li
+            //-         a(href="/bloodbank/bloodstock") Blood Stock
+            //-     li(class="active")
+            //-         a(href="") Events
+            //-     li
+            //-         a(href="/bloodbank/beneficiary/beneficiarylist") Beneficiaries
+            //-     li
+            //-         a(href="/bloodbank/donor/donorlist") Donors
+            //-     li
+            //-         a(href="/bloodbank/reservation") Reservation
+
+            div.navbar-end
+                div.navbar-item.has-dropdown.is-hoverable
+                    //- a.navbar-link: span.icon: i.fa.fa-user
+                    //- div.navbar-dropdown.is-right
+                    //-     a.navbar-item(href="/settings") Settings
+                    //-     a.navbar-item(href="/logout") Log-out
+
+    div.container-fluid     
+
+
+
+         
+        //- This part right here is the dynamic content. Once you extend
+        //- this template, you can place anything here.
+        
+        // This comment marks the dynamic content
+        block content

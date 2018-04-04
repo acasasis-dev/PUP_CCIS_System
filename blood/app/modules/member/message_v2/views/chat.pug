@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Messaging Version 2</title>
+	</head>
+	<body>
+		h1= `Messages with ${ mate_det.strACCOUNT_EMAIL }`
+		<div id="disp"></div>
+		<form id="form" id="chat_form">
+			<input id="chat_input" type="text"/>
+			<input type="submit" value="Send"/>
+		</form>
+		script( src="/jquery/dist/jquery.js" )
+		script( src="/socket.io-client/dist/socket.io.js" )
+		script.
+			var socket = io()
+			socket.on( "connect", () => {
+			 	socket.emit( "join", "A client connected" )
+			})
+			socket.on( "init", data => {
+				$( "pr" ).remove()
+				data.forEach( cur => {
+					$( "#disp" ).append( "<pr>" + "<b>" + cur.email + "</b>" + ": " + cur.content + "<br/>" + "</pr>" )
+				})
+			})
+			socket.on( "broad", data => {
+				$( "#disp" ).append( "<pr>" + "<b>" + data.email + "</b>" + ": " + data.content + "<br/>" + "</pr>" )
+			})
+			$( "form" ).submit( e => {
+				e.preventDefault()
+				var message = $( "#chat_input" ).val()
+				socket.emit( "messages", message )
+				$( "#chat_input" ).focus().val( "" )
+			})
+	</body>
+</html>

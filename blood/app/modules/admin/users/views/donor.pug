@@ -1,0 +1,16 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{user ? 'Edit': 'Add'} DONOR
+
+    form(method="POST" action=`/admin/users/donor${tblperson ? `/${tblperson.intPERSON_ID}?_method=POST` : ''}`)
+        .field
+            .label Blood Type
+            .control    
+                    select.input(name="type")     
+                        each types in tblbloodtype     
+                            option(value= types.intBLOODTYPE_ID)= types.strBLOODTYPE_DESCRIPTION
+        
+        input.button.is-primary(type="submit" value="Submit")

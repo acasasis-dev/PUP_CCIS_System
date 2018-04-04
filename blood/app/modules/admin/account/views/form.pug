@@ -1,0 +1,39 @@
+extends ../../../../templates/adminnav/adminnav
+
+block content
+    h1.title
+        span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+        | &nbsp; #{tblperson ? 'Edit': 'Add'} Admin
+
+    form(method="POST" action=`/admin/account/addadmin${tbladmin ? `/${tbladmin.intADMIN_ID}?_method=POST` : ''}`)
+        .field
+            .label First Name
+            .control
+                input.input(type="text" name="fn" value= tbladmin ? tbladmin.strADMIN_FN : '' placeholder="Enter First Name" required)
+        .field
+            .label Middle Name
+            .control
+                input.input(type="text" name="mn" value= tbladmin ? tbladmin.strADMIN_MN : '' placeholder="Enter Middle Name")
+        .field
+            .label Last Name
+            .control
+                input.input(type="text" name="ln" value= tbladmin ? tbladmin.strADMIN_LN : '' placeholder="Enter Last Name" required)
+        
+        .field
+            .label E-mail
+            .control
+                input.input(type="email" name="email" value= tbladmin ? tbladmin.strADMIN_EMAIL : '' placeholder="Enter Email" required)
+        
+        .field
+            .label Contact No
+            .control
+                input.input(type="number" name="contact" value= tbladmin ? tbladmin.intADMIN_CONTACT : '' placeholder="Enter Contact No." required)
+        
+        if !tbladmin
+            .field
+                .label Password
+                .control
+                    input.input(type="password" name="password" placeholder="Enter Password" required)
+        input.button.is-primary(type="submit" value="Submit" )
+    br
+    br
