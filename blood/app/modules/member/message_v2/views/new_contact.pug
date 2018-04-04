@@ -1,14 +1,11 @@
-<html>
-	<head>
-		<title>Messaging Version 2</title>
-	</head>
-	<body>
-		<h1>Add a contact</h1>
+extends ../../../../templates/adminnav/adminnav
+
+block content
+	h1.title 
+		span.fa(class= user ? 'fa-user' : 'fa-user-plus')
+		| &nbsp; Add a contact
 		each email in emails
-			form( method="POST" action= `${ redr }` )
+			form(method="POST" action= `${ redr }` )
 				b= email.strACCOUNT_EMAIL
 				input( type="hidden" name="id" value=`${ email.intACCOUNT_ID }` )
-				button( type="submit" ) +
-				br
-	</body>
-</html>
+				button( type="submit" class="btn btn-primary" ) +

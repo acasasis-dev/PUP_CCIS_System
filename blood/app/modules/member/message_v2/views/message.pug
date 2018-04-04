@@ -1,13 +1,11 @@
-<html>
-	<head>
-		<title>Messaging Version 2</title>
-	</head>
-	<body>
-		<h1>Contacts</h1>
+extends ../../../../templates/adminnav/adminnav
+
+block content
+	h1.title
+		span.fa(class= user ? 'fa-user': 'fa fa-address-card'  )
+		| &nbsp; Contacts
+		br
+		br
 		each email in emails
-			<b>
-				a( href=`${ redr + email.msg_con_id }`)= email.strACCOUNT_EMAIL
-			</b>
-			<br/>
-	</body>
-</html>
+			a( href=`${ redr + email.msg_con_id }`)= email.strACCOUNT_EMAIL
+			br

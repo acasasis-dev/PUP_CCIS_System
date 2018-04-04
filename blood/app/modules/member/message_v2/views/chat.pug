@@ -1,14 +1,14 @@
-<html>
-	<head>
-		<title>Messaging Version 2</title>
-	</head>
-	<body>
-		h1= `Messages with ${ mate_det.strACCOUNT_EMAIL }`
-		<div id="disp"></div>
-		<form id="form" id="chat_form">
-			<input id="chat_input" type="text"/>
-			<input type="submit" value="Send"/>
-		</form>
+extends ../../../../templates/adminnav/adminnav
+
+block content
+	h1.title
+		span.fa(class= user ? 'fa-user' : 'fa fa-envelope')
+		| &nbsp; 
+		=`Messages with ${ mate_det.strACCOUNT_EMAIL }`
+		div(id="disp" style="border: 2px solid black;")
+			form( class="form" class="chat_form")
+				input(id="chat_input" type="text")
+				<button type"button" class="btn btn-primary btn-round">Send</button> 
 		script( src="/jquery/dist/jquery.js" )
 		script( src="/socket.io-client/dist/socket.io.js" )
 		script.
@@ -31,5 +31,3 @@
 				socket.emit( "messages", message )
 				$( "#chat_input" ).focus().val( "" )
 			})
-	</body>
-</html>
