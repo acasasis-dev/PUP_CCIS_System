@@ -3,7 +3,7 @@ var db = require('../../../lib/database')();
 
 var authMiddleware = require('../../auth/middlewares/auth');
 
-router.get('/', authMiddleware.hasAuthMember,  (req, res) => {
+router.get('/', authMiddleware.hasAuthMember, (req, res) => {
     db.query(`
         SELECT
             tblbloodbank.*,

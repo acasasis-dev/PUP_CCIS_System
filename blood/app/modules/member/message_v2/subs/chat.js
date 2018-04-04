@@ -84,6 +84,10 @@ io.on( "connection", client => {
 		})
 	})
 
+	client.on( "cls", () => {
+		io.to( id ).emit( "clear" )
+	})
+
 	client.on( "disconnect", () => {
 		console.log( email + " HAS DISCONNECTED FROM THE SERVER" )
 	})
