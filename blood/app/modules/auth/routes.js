@@ -10,8 +10,9 @@ var authMiddleware = require('./middlewares/auth');
 homeRouter.get('/admin',authMiddleware.hasAuthAdmin, (req, res) => {
     var db = require('../../lib/database')();
     db.query(`SELECT * FROM post`, (err, results, fields) => {
+        console.log( results )
         if (err) throw err;
-        return res.render(__dirname + '/views/index1',{post: results});
+        return res.render(__dirname + '/views/index1',{posts: results});
         
     });
     
